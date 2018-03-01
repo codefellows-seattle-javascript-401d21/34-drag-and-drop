@@ -8,11 +8,25 @@ class UIForm extends React.Component {
   render () {
     return (
       <div className='challenge-form'>
-        <TextInput />
-        <SelectBox />
-        <CheckBox />
+        <form onSubmit={this.handleSubmit}>
+          <TextInput 
+            config={({
+              text: 'text input',
+              className:'text-input',
+              id:'text-input-nonvalidated',
+            })}/>
+            <TextInput 
+            config={({
+              text: 'text input',
+              className:'text-input-validating',
+              id:'text-input-validated',
+            })}/>
+
+
+          <SelectBox />
+          <CheckBox />
         
-        
+        </form>  
       </div>
     );
   }

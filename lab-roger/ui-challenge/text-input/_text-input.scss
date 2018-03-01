@@ -1,4 +1,30 @@
 .text-input {
-  position: absolute;
-  margin: 0 auto;
+  border: 1px solid black;
+ 
+  width: 50%;
+  position: relative;
+  margin: 50px auto;
+    #input-error{
+      visibility: hidden;
+    }
+    label {
+      display: block;
+    }
+
+}
+
+
+
+
+
+
+.text-input-validating {
+  border: 1px solid black;
+  width: 50%;
+  position: relative;
+  margin: 50px auto;
+   label{
+     display: block;
+   }
+  
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-
+import './_checkbox.scss'
 class CheckBox extends React.Component {
   render () {
     return (
-      <div>
+      <div className='check-box'>
         <h1> CheckBox Component</h1>
       </div>
     );
