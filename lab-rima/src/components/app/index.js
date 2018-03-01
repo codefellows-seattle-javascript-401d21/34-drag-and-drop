@@ -3,6 +3,7 @@ import createStore from '../../lib/store';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Dashboard from '../dashboard/index';
+import CustomForm from '../custom-form/index';
 
 
 const store = createStore();
@@ -14,6 +15,7 @@ class App extends React.Component{
         <Provider store={store}>
           <BrowserRouter>
             <Route exact path="/" component={Dashboard} />
+            <Route exact path="/customform" component={CustomForm} />
           </BrowserRouter>
         </Provider>
       </main>
