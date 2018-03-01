@@ -3,6 +3,10 @@ import './styles/main.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
 import FormInput from './form-elements/form-input/index';
+import SelectBox from './form-elements/form-selectbox/index';
+import CheckBox from './form-elements/form-checkbox/index';
+import Radio from './form-elements/form-input/index';
+import Button from './form-elements/form-button/index';
 
 
 class CustomForm extends React.Component{
@@ -43,9 +47,21 @@ class CustomForm extends React.Component{
               })}
               onChange={this.handleChange} />
 
-              <button type="submit">
-                submit
-              </button>
+            <FormInput
+              config={({
+                className: 'form-input validation-error',
+                name: 'title',
+                value: this.state.title,
+                type: 'text',
+                placeholder: 'Enter a text'
+              })}
+              onChange={this.handleChange} />
+
+            <SelectBox />
+            <CheckBox />
+            <Radio />
+            <Button />
+
           </form>
         </div>
 
