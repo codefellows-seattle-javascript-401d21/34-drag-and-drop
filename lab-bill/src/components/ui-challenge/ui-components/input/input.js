@@ -4,6 +4,7 @@ import React from 'react'
 class FormInput extends React.Component {
   render() {
     return (
+    <div>
       <input
         type={this.props.config.type}
         name={this.props.config.name}
@@ -11,7 +12,9 @@ class FormInput extends React.Component {
         placeholder={this.props.config.placeholder}
         onChange={this.props.onChange}
         className={this.props.config.className}
-        pattern="[a-zA-Z]{4,16}"/>
+        pattern="[a-zA-Z]{0,16}"/>
+      <label id="input-error">Please enter a valid username</label>
+    </div>
     )
   }
 }
