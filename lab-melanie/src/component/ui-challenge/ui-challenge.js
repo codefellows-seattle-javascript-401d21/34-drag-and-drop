@@ -40,9 +40,11 @@ class UIChallenge extends React.Component {
           onChange={this.handleChange}/>
         {/* <SelectBox/>
         <Checkbox/>
-        <Radio/>
-        <Buttons/> */}
+        <Radio/> */}
+        <Buttons/>
       </div>
     );
   }
 }
+
+export default UIChallenge;

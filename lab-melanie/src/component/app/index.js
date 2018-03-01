@@ -1,3 +1,4 @@
+import './_app.scss';
 import React from 'react';
 import {Provider} from 'react-redux';
 import createStore from '../../lib/store';
@@ -12,22 +13,24 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <header>
-          <nav>
-            <ul>
-              <li><Link to='/'>Dashboard</Link></li>
-              <li><Link to='/ui'>UI Challenge</Link></li>
-            </ul>
-          </nav>
-        </header>
-        <main className="main-content">
-          <Provider store={store}>
-            <BrowserRouter>
-              <Route exact path="/" component={Dashboard} />
-              <Route exact path="/ui" component={UIChallenge} />
-            </BrowserRouter>
-          </Provider>
-        </main>
+        <Provider store={store}>
+          <BrowserRouter>
+            <div>
+              <header>
+                <nav>
+                  <ul>
+                    <li><Link to='/'>Dashboard</Link></li>
+                    <li><Link to='/ui'>UI Challenge</Link></li>
+                  </ul>
+                </nav>
+              </header>
+              <main className="main-content">
+                <Route exact path="/" component={Dashboard} />
+                <Route exact path="/ui" component={UIChallenge} />
+              </main>
+            </div>
+          </BrowserRouter>
+        </Provider>
       </div>
     );
   }

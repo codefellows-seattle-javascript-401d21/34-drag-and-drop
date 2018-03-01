@@ -1,4 +1,4 @@
-import './_text-input';
+import './_text-input.scss';
 import React from 'react';
 
 class TextInput extends React.Component {
@@ -7,7 +7,7 @@ class TextInput extends React.Component {
       <div className="input-form">
         <form>
           <label
-            htmlFor={this.props.config.id}></label>
+            htmlFor={this.props.config.id}>text input</label>
           <input
             type={this.props.config.type}
             name={this.props.config.name}
@@ -15,7 +15,7 @@ class TextInput extends React.Component {
             placeholder={this.props.config.placeholder}
             onChange={this.props.onChange}
             className={this.props.config.className}
-            pattern={this.props.pattern}></input>
+            pattern={this.props.config.pattern}></input>
           <label
             className="input-error">please enter a valid username</label>
         </form>
@@ -23,3 +23,5 @@ class TextInput extends React.Component {
     );
   }
 }
+
+export default TextInput;
