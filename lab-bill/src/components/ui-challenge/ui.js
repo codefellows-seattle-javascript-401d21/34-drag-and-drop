@@ -46,7 +46,7 @@ class UI extends React.Component {
                 placeholder: 'React Documentation'
               })}
               onChange={this.handleChange}/>
-
+            
               <Slider
                 config={({
                   id: 'slider-one',

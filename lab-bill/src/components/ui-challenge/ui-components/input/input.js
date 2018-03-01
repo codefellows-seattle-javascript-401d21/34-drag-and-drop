@@ -1,4 +1,4 @@
-// import './_input.scss'
+import './_input.scss'
 import React from 'react'
 
 class FormInput extends React.Component {
@@ -10,7 +10,8 @@ class FormInput extends React.Component {
         value={this.props.config.value}
         placeholder={this.props.config.placeholder}
         onChange={this.props.onChange}
-        className={this.props.config.className}/>
+        className={this.props.config.className}
+        pattern="[a-zA-Z]{4,16}"/>
     )
   }
 }
