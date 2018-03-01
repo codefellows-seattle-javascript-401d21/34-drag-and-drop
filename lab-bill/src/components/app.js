@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import createStore from '../lib/store';
 import Dashboard from './dashboard/dashboard';
-import UI from './ui-challenge/ui'
+import UI from './ui-challenge/ui';
 import {BrowserRouter, Route} from 'react-router-dom';
 import combineReducers from '../reducers/index';
 

@@ -1,5 +1,5 @@
 // import './_slider.scss'
-import React from 'react'
+import React from 'react';
 
 class SliderCheckbox extends React.Component {
   render() {
@@ -14,8 +14,8 @@ class SliderCheckbox extends React.Component {
 
         <label htmlFor={this.props.config.id}><div></div></label>
       </div>
-    )
+    );
   }
 }
 
-export default SliderCheckbox
+export default SliderCheckbox;
