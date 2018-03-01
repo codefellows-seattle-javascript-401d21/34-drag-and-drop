@@ -1,8 +1,8 @@
-import './style/reset.scss';
-import './style/main.scss';
+import './styles/main.scss';
 
 import React from 'react';
 import ReactDom from 'react-dom';
+import FormInput from './form-elements/form-input/index';
 
 
 class CustomForm extends React.Component{
@@ -23,7 +23,7 @@ class CustomForm extends React.Component{
   };
 
   handleChange(e){
-    this.setState({[e.target,name]: e.target.value});
+    this.setState({[e.target.name]: e.target.value});
   };
 
   render(){
