@@ -1,0 +1,38 @@
+#validated-input {
+  border: 1px solid gray;
+  border-radius: 0;
+  padding: 1.75vw;
+}
+
+#validated-input:focus {
+  outline: none;
+}
+
+.container {
+  width: 80%;
+  margin: 4vw auto;
+  font-family: helvetica;
+  position: relative;
+}
+
+.container label {
+  display: block;
+  font-weight: bold;
+  padding: 2vw 0;
+}
+
+#input-error {
+  visibility: hidden;
+  position: absolute;
+  color: red;
+  font-size: 2vw;
+  right: 10%;
+}
+
+#validated-input:not(:placeholder-shown):invalid {
+  border: 3px solid red;
+}
+
+#validated-input:not(:placeholder-shown):invalid + #input-error {
+  visibility: visible;
+}
