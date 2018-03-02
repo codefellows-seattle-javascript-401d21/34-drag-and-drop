@@ -1,0 +1,21 @@
+$primary-color: rgb(102, 101, 93);
+$secondary-color: rgb(211, 169, 211);
+$tertiary-color: rgb(255, 255, 236);
+
+.category-item {
+  float: left;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 30%;
+  border: 2px solid $tertiary-color;
+  border-radius: 45px 5px;
+  font-size: 30px;
+  color: $secondary-color;
+}
+
+.category-item button {
+  margin-bottom: 10px;
+}

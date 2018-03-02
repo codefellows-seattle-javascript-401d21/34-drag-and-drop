@@ -1,0 +1,23 @@
+$primary-color: rgb(102, 101, 93);
+$secondary-color: rgb(211, 169, 211);
+$tertiary-color: rgb(255, 255, 236);
+
+fieldset {
+  border: none;
+}
+
+input {
+  height: 40px;
+  width: 75%;
+  background-color: $tertiary-color;
+  color: $primary-color;
+  font-size: 20px;
+}
+
+button {
+  width: 35%;
+  height: 50px;
+  color: $primary-color;
+  background-color: $secondary-color;
+  font-size: 20px;
+}

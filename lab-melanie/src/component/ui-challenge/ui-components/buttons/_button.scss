@@ -1,0 +1,23 @@
+$primary-color: rgb(102, 101, 93);
+$secondary-color: rgb(211, 169, 211);
+$tertiary-color: rgb(255, 255, 236);
+
+.button-one:hover {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+.button-two:hover {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+.button-one, .button-two {
+  margin: 15px;
+}
+
+.button-div {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color:$tertiary-color;
+}
