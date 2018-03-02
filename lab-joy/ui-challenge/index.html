@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Group Generator" />
+    <meta property="og:type" content="website" />
+    <title>Code 401 - UI Challenge</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>UI Challenge - Custom Form Elements</h1>
+
+      <form>
+        <h2>text input</h2>
+        <input type="text" placeholder="placeholder text" />
+
+        <h2>text input w/ validation error</h2>
+        <input id="validated-input" required type="text" placeholder="placeholder text" />
+        <p id="input-error">please enter a valid username</p>
+
+
+        <h2>select box</h2><br />
+        <div class="select">
+          <select>
+            <option disabled selected hidden>please select an option...</option>
+            <option>option 1</option>
+            <option>option 2</option>
+            <option>option 3</option>
+            <option>option 4</option>
+            <option>option 5</option>
+          </select>
+        </div>
+
+        <br /><br />
+
+        <h2>checkbox</h2><br />
+        <label class="check">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" checked />
+          <span class="checkmark"></span>
+        </label>
+
+        <br /><br />
+
+        <h2>radio</h2><br />
+        <input type="radio" name="a" />
+        <input type="radio" name="a" checked />
+
+        <br /><br />
+
+        <h2>buttons</h2>
+        <br />
+        <input type="submit" value="submit" />
+        <input type="submit" value="submit" class="btn-active" />
+      </form>
+    </div>
+  </body>
+</html>

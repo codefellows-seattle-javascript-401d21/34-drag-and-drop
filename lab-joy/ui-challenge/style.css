@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("reset.css");
+form input, form button, form input[type=submit], form select {
+  border: solid 1px #666;
+  border-radius: 0.1em; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  font: 100% Raleway, sans-serif;
+  line-height: 1.5em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.07em; }
+
+#wrapper {
+  width: 80%;
+  max-width: 35em;
+  margin: 2em auto; }
+
+a {
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 900; }
+
+h1 {
+  margin: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 900;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  text-decoration: underline; }
+
+h2 {
+  margin: 0.5em 0 0 0;
+  font-size: 1.2em;
+  font-weight: 900; }
+
+.center {
+  text-align: center; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+form input, form button, form input[type=submit] {
+  margin: 0.5em 0 2em 0;
+  padding: 0.7em;
+  color: #666;
+  font-size: 1.2em;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+form input[type=radio], form .check {
+  display: inline-block;
+  position: relative;
+  margin: 0.5em 1em 1.5em 0;
+  width: 3em;
+  height: 3em;
+  background: #ddd;
+  font-size: 1.2em;
+  border: solid 1px #aaa;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+form input::placeholder {
+  color: #ddd; }
+form input[type=text] {
+  width: 100%; }
+form input:invalid {
+  border: 1px solid #c60101; }
+form input[type=radio] {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.15em #ddd; }
+  form input[type=radio]:hover {
+    border: solid 1px #000; }
+  form input[type=radio]:hover, form input[type=radio]:checked {
+    background: #666; }
+  form input[type=radio]:active {
+    transform: scale(1.2);
+    box-shadow: inset 0 0 0 1.15em #aaa; }
+form .check:hover {
+  border: solid 1px #000; }
+form .check:active {
+  transform: scale(1.2);
+  background: #aaa; }
+form .check input {
+  visibility: hidden; }
+  form .check input:checked + .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3em;
+    width: 3em; }
+    form .check input:checked + .checkmark:after {
+      display: block; }
+form .check .checkmark:after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0.2em;
+  left: 1.1em;
+  width: 0.6em;
+  height: 1.9em;
+  border: solid gray;
+  border-width: 0 5px 5px 0;
+  border-radius: 0.2em;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg); }
+form .select:after {
+  content: '▾';
+  float: right;
+  margin-top: -40px;
+  margin-right: 10px;
+  font-size: 3em;
+  color: #666; }
+  .ie form .select:after {
+    display: none; }
+form select {
+  width: 100%;
+  overflow: hidden;
+  width: 100%;
+  padding: 0.7em;
+  color: #666;
+  background: #fff;
+  background: transparent;
+  background-image: none;
+  font-size: 1.2em;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+form button, form input[type=submit] {
+  margin: 0.5em 1em 2em 0;
+  padding: 0.8em 2em;
+  background: #ddd;
+  transition-duration: 0.25s; }
+  form button:hover, form input[type=submit]:hover {
+    background: #ccc; }
+  form button:active, form input[type=submit]:active {
+    color: #fff;
+    background: #000;
+    transform: scale(1.1); }
+
+.btn-active {
+  color: #fff !important;
+  background: #000 !important; }
+
+#input-error {
+  visibility: hidden;
+  margin: -1.9em 0 2.5em 0;
+  text-align: right;
+  color: #c60101; }
+
+#validated-input:invalid + #input-error {
+  visibility: visible; }
+
+/*# sourceMappingURL=style.css.map */
