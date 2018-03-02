@@ -1,0 +1,16 @@
+.submit_button {
+  margin-top: 20px;
+  margin-left: 5%;
+  width: 110px;
+  height: 30px;
+  outline: 1px solid red;
+  transform: 150ms;
+  border-radius: 3px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.submit_button:hover {
+  background-color: grey;
+  color: red;
+}
