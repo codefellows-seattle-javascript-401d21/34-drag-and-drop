@@ -4,9 +4,15 @@ import React from 'react';
 class Buttons extends React.Component {
   render() {
     return (
-      <button
-        type="button"
-        className="button-one">Submit</button>
+      <div>
+        <div className="button-div">buttons</div>
+        <button
+          type="button"
+          className="button-one">Submit</button>
+        <button
+          type="button"
+          className="button-two">Submit</button>
+      </div>
     );
   }
 }

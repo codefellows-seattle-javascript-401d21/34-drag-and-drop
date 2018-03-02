@@ -1,0 +1,38 @@
+$primary-color: rgb(102, 101, 93);
+$secondary-color: rgb(211, 169, 211);
+$tertiary-color: rgb(255, 255, 236);
+
+.input-form {
+  padding-top: 40px;
+  position: relative;
+  font-size: 20px;
+
+  input {
+    outline: none;
+  }
+
+  label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 12%;
+    color: $tertiary-color;
+  }
+
+  .input-error {
+    visibility: hidden;
+    color: #f77474;
+    position: absolute;
+    top: 95px;
+    left: 60%;
+  }
+}
+
+input:invalid {
+  border: 2px solid red;
+
+  + .input-error {
+      visibility: visible;
+  }
+}
+

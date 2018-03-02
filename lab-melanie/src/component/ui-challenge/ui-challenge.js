@@ -38,9 +38,9 @@ class UIChallenge extends React.Component {
             pattern: '[a-z0-9]{4,8}',
           })}
           onChange={this.handleChange}/>
-        {/* <SelectBox/>
+        <SelectBox/>
         <Checkbox/>
-        <Radio/> */}
+        <Radio/>
         <Buttons/>
       </div>
     );

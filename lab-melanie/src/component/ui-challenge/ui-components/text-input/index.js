@@ -5,7 +5,7 @@ class TextInput extends React.Component {
   render() {
     return (
       <div className="input-form">
-        <form>
+        <form noValidate>
           <label
             htmlFor={this.props.config.id}>text input</label>
           <input
