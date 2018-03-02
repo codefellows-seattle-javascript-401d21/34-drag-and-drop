@@ -10,7 +10,8 @@ class RadioButton extends React.Component {
         <input
           type='radio'
           id={this.props.config.id}
-          name={this.props.config.name}/>
+          value={this.props.config.item1}
+          name='radio' />
 
         <label 
           htmlFor={this.props.config.id} 

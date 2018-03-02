@@ -14,12 +14,13 @@ class UiChallenge extends React.Component {
 
     this.state = {
       title: '',
-      // slider: false,
+      dropDown: '',
+      checkbox: false,
+      radio: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.sliderToggle = this.sliderToggle.bind(this);
   }
 
   handleSubmit(e) {
@@ -29,19 +30,14 @@ class UiChallenge extends React.Component {
 
   handleChange(e) {
     this.setState({[e.target.name]: e.target.value});
-    /^[a-zA-Z]{4,16}$/.test(this.state.title) ? undefined : console.log('failed');
   }
 
-  sliderToggle(e) {
-    console.log('slider is:', e.target.checked);
-    this.setState({slider: e.target.checked});
-  }
 
   render() {
     return (
       <div className="application">
-        <h1>Hello world!</h1>
-        <h3>Check out my custom form elements</h3>
+        <h1>Ya, this is a form to show off my sweet sweet baby jesus skills</h1>
+        <h3>i got buttons, inputs, radios, checkbox and SelectBox.  pick what you like but bewarned, it might brake something.</h3>
 
         <div className="form-container">
           <form onSubmit={this.handleSubmit} noValidate>
@@ -62,12 +58,13 @@ class UiChallenge extends React.Component {
             <h4>SelectBox</h4>
             <SelectBox  
               config={({
-                menuName: 'SelectBox',
+                menuName: this.state.dropDown || 'SelectBox',
                 item1: 'this',
                 item2: 'is',
                 item3: 'my',
                 item4: 'box',
-              })} />
+              })}
+              onChange={this.handleChange} />
 
 
             <h4>Radio Button</h4>
@@ -77,7 +74,7 @@ class UiChallenge extends React.Component {
                 divName: 'radio-btn-div',
                 labelName: 'radio-btn-label',
                 id: 'radio-btn',
-              })}/>
+              })} />
 
             <RadioButton
               config={({
