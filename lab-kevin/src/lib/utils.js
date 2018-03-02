@@ -5,5 +5,12 @@ const validate = (data) => {
   return true;
 };
 
-export {validate};
+const  renderIf = (item) => {
+  let itemCheck = item; 
+  if (Array.isArray(item)) itemCheck = item.length;
+  if(!itemCheck) return;
+  return item;
+};
+
+export {validate, renderIf};
 
