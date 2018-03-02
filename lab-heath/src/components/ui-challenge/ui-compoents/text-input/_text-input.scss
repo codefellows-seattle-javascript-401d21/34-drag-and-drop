@@ -1,15 +1,10 @@
-// input {
-//   width: 80%;
-//   margin: 0 auto;
-//   display: block;
-// }
 
 /* INPUT WITH VALIDATION */
 .validated-input {
   border: 1px solid gray;
   border-radius: 0;
   width: 300px;
-  padding: 1.75vw;
+  padding: 10px;
   margin-left: 5%;
   display: inline-block;
 }
@@ -28,7 +23,7 @@
   visibility: hidden;
   position: absolute;
   color: red;
-  font-size: 2vw;
+  font-size: 15px;
   right: 45%;
   margin-top: 5px;
   text-transform: uppercase;
@@ -42,5 +37,5 @@
   visibility: visible;
   position: static;
   display: block;
-  margin-left: 20%;
+  margin-left: 115px;
 }

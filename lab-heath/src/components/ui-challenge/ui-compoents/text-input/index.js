@@ -12,7 +12,8 @@ class FormInput extends React.Component {
           value={this.props.config.value}
           placeholder={this.props.config.placeholder}
           onChange={this.props.onChange}
-          className={this.props.config.className}/>
+          className={this.props.config.className}
+          autoComplete="off"/>
 
         <label id="input-error">Please enter a valid username</label>
       </div>

@@ -35,11 +35,13 @@ button:hover {
 
 .outside-box {
   display: inline-block;
+  width: 277px;
 }
 
 .drop-image {
-  margin-left: 63%;
-  display:inline-block;
+  float: right;
+  position: relative;
+  display: block;
   background-image: url('../../../../../../sprites/form-elements-sprite.png');
   background-position: -1143px -281px; 
   width: 77px;
