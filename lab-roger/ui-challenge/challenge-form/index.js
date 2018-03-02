@@ -15,15 +15,18 @@ class UIForm extends React.Component {
               className:'text-input',
               id:'text-input-nonvalidated',
             })}/>
-            <TextInput 
+          <TextInput 
             config={({
-              text: 'text input',
+              text: 'text input w/ validation error',
               className:'text-input-validating',
               id:'text-input-validated',
             })}/>
 
 
-          <SelectBox />
+          <SelectBox 
+            config={({
+              id: 'drop-down',
+            })} />
           <CheckBox />
         
         </form>  

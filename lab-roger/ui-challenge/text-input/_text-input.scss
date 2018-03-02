@@ -19,12 +19,19 @@
 
 
 .text-input-validating {
-  border: 1px solid black;
+  border: 1px solid green;
   width: 50%;
   position: relative;
   margin: 50px auto;
-   label{
-     display: block;
+  label{
+    display: block;
+  }
+  #input-error {
+    visibility: hidden;
+  }
+   #text-input-validated:invalid + #input-error {
+        visibility: visible;
+      
    }
   
 }
