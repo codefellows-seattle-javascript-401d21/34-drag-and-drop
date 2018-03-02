@@ -62,16 +62,29 @@ class UiChallenge extends React.Component {
             <h4>SelectBox</h4>
             <SelectBox  
               config={({
-                
+                menuName: 'SelectBox',
+                item1: 'this',
+                item2: 'is',
+                item3: 'my',
+                item4: 'box',
               })} />
 
 
             <h4>Radio Button</h4>
             <RadioButton
               config={({
+                name: 'group1',
                 divName: 'radio-btn-div',
                 labelName: 'radio-btn-label',
                 id: 'radio-btn',
+              })}/>
+
+            <RadioButton
+              config={({
+                name: 'group1',
+                divName: 'radio-btn-div',
+                labelName: 'radio-btn-label',
+                id: 'radio-btn2',
               })}/>
 
 

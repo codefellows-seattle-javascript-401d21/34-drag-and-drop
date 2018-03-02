@@ -9,9 +9,12 @@ class RadioButton extends React.Component {
 
         <input
           type='radio'
-          id={this.props.config.id}/>
+          id={this.props.config.id}
+          name={this.props.config.name}/>
 
-        <label htmlFor={this.props.config.id} className={this.props.config.labelName} />  
+        <label 
+          htmlFor={this.props.config.id} 
+          className={this.props.config.labelName} />  
 
       </div>
     );
