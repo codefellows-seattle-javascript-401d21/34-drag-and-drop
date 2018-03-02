@@ -1,0 +1,96 @@
+$background-image: url('../images/form-elements-sprite.png');
+
+.custom-input-wrap {
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-input {
+  outline: none;
+}
+
+input[type="text"] {
+  padding: .5em 0;
+  text-indent: .5em;
+}
+
+.custom-validate {
+  border: 1px solid lightgrey;
+}
+
+.custom-validate + label {
+  display: block;
+}
+
+.custom-validate + label {
+  margin: .25em;
+  color: red;
+  text-align: right;
+  visibility: hidden;
+}
+
+.custom-validate:not(:placeholder-shown):invalid {
+ border: 1px solid red; 
+}
+
+.custom-validate:not(:placeholder-shown):invalid + label {
+  visibility: visible;
+}
+
+
+input[type="submit"] {
+  padding: .5em 1em;
+  outline: none;
+  background-color: #999;
+  color: #333;
+
+  &:hover {
+    background-color: #333;
+    color: #999;
+  }
+
+  &:active {
+    background-color: #666;
+    color: #000;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: -80px -32px;
+  background-image: url(/images/form-elements-sprite.png);
+  display: inline-block;
+}
+
+input[type="radio"]:checked + label { 
+  background-position: -111px, -32px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: -21px -32px;
+  background-image: url(/images/form-elements-sprite.png);
+  display: inline-block;
+}
+
+
+input[type="checkbox"]:checked + label { 
+  background-position: -52px, -32px;
+}
+
