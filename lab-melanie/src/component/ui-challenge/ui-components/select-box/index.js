@@ -24,11 +24,11 @@ class SelectBox extends React.Component {
         <input onClick={this.handleSelect} className={this.state.select ? 'up' : 'down'}/>
         <div className="sprite"></div>
         <ul className={this.state.select ? 'open' : 'closed'}>
-          <li>option 1</li>
-          <li>option 2</li>
-          <li>option 3</li>
-          <li>option 4</li>
-          <li>option 5</li>
+          <li onClick={this.handleSelect}>option 1</li>
+          <li onClick={this.handleSelect}>option 2</li>
+          <li onClick={this.handleSelect}>option 3</li>
+          <li onClick={this.handleSelect}>option 4</li>
+          <li onClick={this.handleSelect}>option 5</li>
         </ul>
 
       </div>

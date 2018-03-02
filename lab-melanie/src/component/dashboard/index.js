@@ -1,4 +1,3 @@
-import './_dashboard.scss';
 import React from 'react';
 import {connect} from 'react-redux';
 import {categoryCreate, categoryDelete} from '../../action/category-action';
