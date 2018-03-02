@@ -1,6 +1,31 @@
-.check-box {
+#button1{
+  display: none;
+}
+#button2 {
+  display: none;
+}
+.label {
+  width: 158px;
+  height: 158px;
   border: 1px solid black;
-  width: 50%;
-  // position: absolute;
-  margin: 150px auto;
+  display: block;
+  border-radius: 25px;
+  position: relative;
+}
+
+input[type='checkbox']:checked + label {
+  background: url('../assets/form-elements-sprite.png') -382px -239px;
+  
+
+ 
+
+}
+input[type='checkbox']:not(:checked) + label {
+  background: url('../assets/form-elements-sprite.png') -159px -239px;
+
+}
+.check-box-container {
+  margin-top: 200px;
+
+  display: inline-flex;
 }

@@ -27,7 +27,11 @@ class UIForm extends React.Component {
             config={({
               id: 'drop-down',
             })} />
-          <CheckBox />
+          <CheckBox
+            config={({
+              title: 'checkbox',
+              class:'check-box',
+            })} />
         
         </form>  
       </div>
