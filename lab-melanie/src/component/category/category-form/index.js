@@ -1,4 +1,3 @@
-import './_category-form.scss';
 import React from 'react';
 
 class CategoryForm extends React.Component {
