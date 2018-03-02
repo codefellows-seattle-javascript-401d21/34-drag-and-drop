@@ -1,0 +1,11 @@
+$primary-color: rgb(102, 101, 93);
+$secondary-color: rgb(211, 169, 211);
+$tertiary-color: rgb(255, 255, 236);
+
+.expense-item {
+  border: 2px solid $tertiary-color;
+  border-radius: 45px 5px;
+  padding: 7px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}

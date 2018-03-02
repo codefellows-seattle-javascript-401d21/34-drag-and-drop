@@ -1,0 +1,64 @@
+$primary-color: rgb(102, 101, 93);
+$secondary-color: rgb(211, 169, 211);
+$tertiary-color: rgb(255, 255, 236);
+
+body {
+  background-color: $primary-color;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  color: $secondary-color;
+}
+
+p {
+  color: $tertiary-color;
+  font-style: italic;
+}
+
+ul {
+  margin-bottom: 40px;
+  text-align: left;
+  left: 0;
+  // float: left;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $tertiary-color;
+  font-size: 18px;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+fieldset {
+  border: none;
+}
+
+input {
+  height: 40px;
+  width: 75%;
+  background-color: $tertiary-color;
+  color: $primary-color;
+  font-size: 20px;
+}
+
+button {
+  width: 35%;
+  height: 50px;
+  color: $primary-color;
+  background-color: $secondary-color;
+  font-size: 20px;
+}
+
+.category-form input {
+  width: 40%;
+}

@@ -1,0 +1,26 @@
+$primary-color: rgb(102, 101, 93);
+$secondary-color: rgb(211, 169, 211);
+$tertiary-color: rgb(255, 255, 236);
+
+.no-check {
+  background: url('../../sprites/sprite-resize.png') no-repeat -53px -80px;
+  width: 56px;
+  height: 56px;
+  margin-left: 13%;
+  margin-bottom: 20px;
+}
+
+.check {
+  background: url('../../sprites/sprite-resize.png') no-repeat -130px -80px;
+	width: 56px;
+  height: 56px;
+  margin-left: 13%;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  margin-left: -67%;
+  font-size: 20px;
+  margin-bottom: 14px;
+  color:$tertiary-color;
+}
