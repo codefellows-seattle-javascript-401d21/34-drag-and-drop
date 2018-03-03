@@ -78,6 +78,19 @@ class UIChallenge extends React.Component{
             <Input config={{name: 'submit', type: 'submit', className: 'submit-btn'}}/>
             <Input config={{name: 'submit', type: 'submit', className: 'submit-btn'}}/>
           </div>
+
+          <div>
+            <div>
+            <input type="checkbox" name="list"/>
+            <label htmlFor="list"></label>
+            <input type="text"/>
+            <ul>
+              <li>Hello</li>
+              <li>Goodbye</li>
+            </ul>
+            </div>
+          </div>
+
         </form>
       </section>
     );
