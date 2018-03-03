@@ -9,7 +9,7 @@ class ExpenseItem extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      expense: this.props.expense ? this.props.expense : {},
+      // expenses: this.props.expenses ? this.props.expenses : {},
       editing: false,
     };
 
@@ -23,7 +23,7 @@ class ExpenseItem extends React.Component {
   }
 
   handleDelete() {
-    this.props.expenseDelete(this.props.category);
+    this.props.expenseDelete(this.props.expenses);
   }
 
   handleUpdate(expense) {
@@ -35,14 +35,15 @@ class ExpenseItem extends React.Component {
   render() {
     return (
       <section className="expense-item" key={this.props.expenses._id}>
-        <h4 onDoubleClick={this.handleEditing}>{this.props.expenses.spend}</h4>
-        <p>Spent: {this.props.expense.cost}</p>
+        <h4 onDoubleClick={this.handleEditing}>Expense: {this.props.expenses.spend}</h4>
+        <p>Spent: {this.props.expenses.cost}</p>
         <button type="button" onClick={this.handleDelete}>{this.props.buttonText}</button>
         {renderIf(this.state.editing,
           <ExpenseForm
             className="expense-update"
             buttonText="Expense Update"
-            expense={this.props.expense}
+            expenses={this.props.expenses}
+
             onComplete={this.handleUpdate}/>)}
       </section>
     );

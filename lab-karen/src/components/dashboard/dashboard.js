@@ -13,7 +13,7 @@ class Dashboard extends React.Component {
         <h1>Budget App</h1>
 
         <CategoryForm
-          buttonText='Create'
+          buttonText='Create Category'
           onComplete={this.props.categoryCreate}/>
 
         {renderIf(this.props.categories.length, this.props.categories.map(category =>

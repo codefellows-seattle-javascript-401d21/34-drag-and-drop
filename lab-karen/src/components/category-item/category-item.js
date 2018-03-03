@@ -41,12 +41,12 @@ class CategoryItem extends React.Component {
         <h2>Budget Categories</h2>
         <h4>Category: {this.props.category.title}</h4>
         <p>Budget:{this.props.category.budget}</p>
-        <button type="button" onClick={this.handleDelete}>Delete</button>
+        <button type="button" onClick={this.handleDelete}>Delete Category</button>
 
         {renderIf(this.state.editing,
           <div>
             <CategoryForm
-              buttonText="Update"
+              buttonText="Category Update"
               onComplete={this.props.categoryUpdate}
               category={this.state.category}
             />
@@ -57,7 +57,7 @@ class CategoryItem extends React.Component {
           buttonText='Add Expense'
           categoryId={this.props.category._id}
           onComplete={this.props.expenseCreate}/>
-
+        {console.log('expense update', this.props)}
         {renderIf(this.props.expenses[this.props.category._id].length>0,
           this.props.expenses[this.props.category._id].map(expenses =>
             <ExpenseItem
