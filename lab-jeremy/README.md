@@ -29,7 +29,7 @@ _Libraries_:
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
 
-_Last modified_: 3/2/2018
+_Last modified_: 3/3/2018
 
 # App use
 

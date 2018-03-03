@@ -3,6 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import createStore from '../../lib/store';
 import Dashboard from '../dashboard/dashboard';
+import UIChallenge from '../../../ui-challenge/ui-challenge';
 import {BrowserRouter, Route} from 'react-router-dom';
 
 const store = createStore();
@@ -19,7 +20,7 @@ class App extends React.Component {
           <BrowserRouter>
             <div>
               <Route exact path="/" component={Dashboard}/>
-              <Route exact path="/ui" component={() => <h1>WELCOME TO THE UI PAGE!</h1>}/>
+              <Route exact path="/ui" component={UIChallenge}/>
             </div>
           </BrowserRouter>
         </Provider>
