@@ -88,27 +88,31 @@ class CustomForm extends React.Component{
                 valueFive: 'option 5',
               })} />
 
-            <CheckBox
-              config={({
-                className: 'uncheckedbox-icon',
-              })}
-              onClick={this.handleClick} />
-            <CheckBox
-              config={({
-                className: 'checkedbox-icon',
-              })}
-              onClick={this.handleClick} />
+            <div className='checkboxes'>
+              <CheckBox
+                config={({
+                  className: 'uncheckedbox-icon',
+                })}
+                onClick={this.handleClick} />
+              <CheckBox
+                config={({
+                  className: 'checkedbox-icon',
+                })}
+                onClick={this.handleClick} />
+            </div>
 
-            <Radio
-              config={({
-                className: 'unchecked-radio-icon',
-              })}
-              onClick={this.handleClick} />
-            <Radio
-              config={({
-                className: 'checked-radio-icon',
-              })}
-              onClick={this.handleClick} />
+            <div className='radio-buttons'>
+              <Radio
+                config={({
+                  className: 'unchecked-radio-icon',
+                })}
+                onClick={this.handleClick} />
+              <Radio
+                config={({
+                  className: 'checked-radio-icon',
+                })}
+                onClick={this.handleClick} />
+            </div>
 
             <Button
               config={({
