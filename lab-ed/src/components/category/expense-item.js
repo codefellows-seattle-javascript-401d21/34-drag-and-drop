@@ -28,11 +28,9 @@ class ExpenseItem extends React.Component {
   render() {
     return (
       <section id={this.props.expense._id} onDoubleClick={this.handleEditingExpense}>
-        <h3>Name</h3>
-        <p>{this.props.expense.name}</p>
-        <h3>Price</h3>
-        <p>{this.props.expense.price}</p>
-        <button className="deleteButton" id={this.props.expense._id} onClick={this.handleDelete}>Delete</button>
+        <h2 className="cat-display">Name {this.props.expense.name} Price ${this.props.expense.price}</h2>
+        <button className="delete-button" id={this.props.expense._id} onClick={this.handleDelete}>Delete</button>
+        
         {renderIf(this.state.editing, <ExpenseForm
           buttonText="update expense"
           expense={this.props.expense}

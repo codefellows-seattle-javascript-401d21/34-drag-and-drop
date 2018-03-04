@@ -1,7 +1,6 @@
-// body {
-//   margin: 60px;
-//   background-color: #aaa;
-// }
+body {
+  background-color: #ddd;
+}
 
 .wrapper {
   display: grid;
@@ -12,27 +11,26 @@
 }
 
 .one {
-  background-color: red;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
+  border: 2px solid #bbb;
 }
 
 .two {
-  background-color: green;
-  grid-column-start: 3;
+  grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row-end: 3;
 }
 
 .three {
-  background-color: yellow;
   grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
   grid-row-end: 4;
+  border: 2px solid #bbb;
 }
 
 h1 {
@@ -77,8 +75,22 @@ input {
   text-align: center;
 }
 
-.deleteButton {
-  margin-left: 300px;
-  background-color: red;
-  border-bottom: 2px solid #bbb;
+.cat-display {
+  display: inline-block;
+}
+
+.delete-button {
+  display: inline-block;
+  color: red;
+  margin-left: 60px;
+}
+
+.test {
+  display: inline-block;
+}
+
+.create-exp-button {
+  display: inline;
+  color: red;
+  margin-left: 60px;
 }
