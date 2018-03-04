@@ -4,15 +4,23 @@ class SelectBox extends React.Component {
   render () {
     return (
       <div className='select-box'>
-        <div><p>select box</p></div>
-        <input id={this.props.config.id} type="checkbox" />
-        <div className='open'>Option 1</div>
-        <div className='open'>Option 2</div>
-        <div className='open'>Option 3</div>
-        <div className='open'>Option 4</div>
-        <div className='open'>Option 5</div>
+        <h3>select box</h3>
+        <label htmlFor={this.props.config.id}>Please select an option ...<div id='drop-arrow'></div></label>
+        <input id={this.props.config.id} type='checkbox' defaultChecked/>
+        
+        <input id='option1' type='checkbox' />
+        <label htmlFor='option1'className='open odd' >option1</label>
+        <label htmlFor='option2'className='open even' >option2</label>
+        <input id='option2' type='checkbox' />
+        <label htmlFor='option3'className='open odd' >option3</label>
+        <input id='option3' type='checkbox' />
+        <label htmlFor='option4'className='open even' >option4</label>
+        <input id='option4' type='checkbox' />
+        <label htmlFor='option5'className='open odd' >option5</label>
+        <input id='option5' type='checkbox' />
+        </div>
        
-      </div>
+    
     );
   }
 }
