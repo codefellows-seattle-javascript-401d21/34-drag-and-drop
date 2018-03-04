@@ -8,7 +8,7 @@ class Button extends React.Component {
         <h3>buttons</h3>
         <input  id='button'type='checkbox'/>
         <label className='label-button' htmlFor='button'>submit</label>
-        <input id='button2'type='checkbox'/>
+        <input defaultChecked id='button2'type='checkbox'/>
         <label className='label-button' htmlFor='button2'>submit</label>
       </div>
     );

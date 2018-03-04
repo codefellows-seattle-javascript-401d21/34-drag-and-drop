@@ -4,10 +4,11 @@ class RadioButton extends React.Component {
   render () {
     return (
       <div className='radio-button-container'>
-          <input id='radio1'type='checkbox'/>
-          <label className='label-radio' htmlFor='radio1'></label>
-          <input id='radio2'type='checkbox'/>
-          <label className='label-radio' htmlFor='radio2'></label>
+        <h3>radio</h3>
+        <input id='radio1'type='checkbox'/>
+        <label className='label-radio' htmlFor='radio1'></label>
+        <input defaultChecked id='radio2'type='checkbox'/>
+        <label className='label-radio' htmlFor='radio2'></label>
       </div>
     );
   }

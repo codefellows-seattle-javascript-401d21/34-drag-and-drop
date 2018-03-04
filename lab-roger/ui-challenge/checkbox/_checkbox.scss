@@ -6,23 +6,27 @@
 }
 
 .check-box-container {
+  width: 50%;
   height: 100px;
-  margin-top: 250px;
-  outline: solid black 1px;
+  margin: 0 auto;
+  margin-top: 250Px;
+  // outline: solid black 1px;
   // position: relative;
   .label-checkbox {
       display: inline-block;
-      width: 75px;
-      height: 75px;
-      border: 1px solid black;
-      border-radius: 25px;
+      width: 40px;
+      height: 40px;
+     margin-right: 15px;
+     
       
     }
   input[type='checkbox']:checked + label {
-    background: url('../assets/form-elements-sprite.png') -382px -239px;
+    background: url('../assets/form-elements-sprite.png') -365px -236px;
+    background-size: 750%;
   }
   input[type='checkbox']:not(:checked) + label {
-    background: url('../assets/form-elements-sprite.png') -159px -239px;
+    background: url('../assets/form-elements-sprite.png') 0px -236px;
+    background-size: 750%;
   
   }
 }
