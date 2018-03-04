@@ -5,7 +5,6 @@ body {
 h1 {
   font-size: 20px;
   text-decoration: underline;
-  margin-left: 100px;
   color: #666;
   margin-bottom: 30px;
 }
@@ -45,10 +44,6 @@ p {
   font-size: 18px;
   box-sizing: border-box;
   border: 1px solid gray;
-}
-
-.in-border-red {
-  border: 1px solid red;
 }
 
 .red {
@@ -124,15 +119,7 @@ p {
   display: inline-block;
 }
 
-.radio2 {
-  height: 80px;
-  width: 70px;
-  background-position: -266px -80px;
-  margin-bottom: 60px;
-  display: inline-block;
-}
-
-.input-radio {
+.input-radio1 {
   position: absolute;
   top: 757px;
   left: 58px;
@@ -141,7 +128,28 @@ p {
   opacity: 0;
 }
 
-.input-radio-check {
+.input-radio1:checked + div {
+  background-position: -123px -80px;
+}
+
+.radio2 {
+  height: 80px;
+  width: 70px;
+  background-position: -266px -80px;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.input-radio2 {
+  position: absolute;
+  top: 757px;
+  left: 58px;
+  width: 54px;
+  height: 54px;
+  opacity: 0;
+}
+
+.input-radio2:checked + div {
   background-position: -267px -80px;
 }
 
@@ -152,6 +160,7 @@ p {
 .button-one {
   border: none;
   background-color:#ddd;
+  color: #000;
   padding: 14px 40px;
   text-align: center;
   font-size: 20px;
@@ -167,12 +176,29 @@ p {
   background-color: #444;
   color: #fff;
 }
-.hover-one {
+.hover-one:hover {
   background-color: #444;
   color: #fff;
 }
 
-.hover-two {
+.hover-two:hover {
   background-color: #ddd;
   color: #000;
+}
+
+#validated-input:focus {
+  outline: none;
+}
+
+#input-error {
+  visibility: hidden;
+  color: red;
+}
+
+#validated-input:not(:placeholder-shown):invalid {
+  border: 1px solid red;
+}
+
+#validated-input:not(:placeholder-shown):invalid + #input-error {
+  visibility: visible;
 }
