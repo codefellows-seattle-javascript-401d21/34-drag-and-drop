@@ -1,0 +1,35 @@
+#button{
+  display: none;
+}
+#button2 {
+  display: none;
+}
+
+.button-container {
+  height: 100px;
+  outline: solid red 1px;
+  // position: relative;
+  .label-button {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    border: 1px solid black;
+    // border-radius: 50%;
+  }  
+    input[type='checkbox']:checked + label {
+      background-color: #e5e5e5;
+      color: black;
+    }
+    input[type='checkbox']:not(:checked) + label {
+      background-color: black;
+      color: white;
+    }
+  label  {
+    // vertical-align: middle;
+    text-align: center;
+    line-height: 75px;
+    
+    
+  } 
+}
+ 

@@ -1,0 +1,31 @@
+#radio1{
+  display: none;
+}
+#radio2 {
+  display: none;
+}
+
+.radio-button-container {
+  height: 100px;
+  outline: solid red 1px;
+  // position: relative;
+  .label-radio {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    border-radius: 50%;
+    
+  }
+ 
+  input[type='checkbox']:checked + label {
+    background: url('../assets/form-elements-sprite.png') -691px -182px; 
+    background-size: 750%;
+  }
+  input[type='checkbox']:not(:checked) + label {
+    background: url('../assets/form-elements-sprite.png') -448px -182px;
+    background-size: 750%;
+
+  }
+  
+}
