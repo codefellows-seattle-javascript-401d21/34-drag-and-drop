@@ -6,7 +6,12 @@ import React from 'react';
 class Radio extends React.Component{
   render(){
     return(
-      <div className={this.props.config.className}>
+      <div>
+        <input
+          id={this.props.config.id}
+          name='radio-button'
+          type='radio' />
+        <label htmlFor={this.props.config.id}></label>
       </div>
     );
   };

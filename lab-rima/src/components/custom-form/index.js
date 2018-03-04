@@ -109,14 +109,12 @@ class CustomForm extends React.Component{
             <div className='radio-buttons'>
               <Radio
                 config={({
-                  className: 'unchecked-radio-icon',
-                })}
-                onClick={this.handleClick} />
+                  id: 'radioOne',
+                })} />
               <Radio
                 config={({
-                  className: 'checked-radio-icon',
-                })}
-                onClick={this.handleClick} />
+                  id: 'radioTwo',
+                })} />
             </div>
 
 

@@ -1,16 +1,20 @@
 $icons: url('../../styles/form-elements-sprite.png');
 
-.unchecked-radio-icon {
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio] + label {
+  display:inline-block;
   background-image: $icons;
   background-position: -578px -241px; 
   width: 175px;
   height: 169px;
   zoom: 0.3;
 }
-.checked-radio-icon {
-  background-image: $icons;
+
+input[type=radio]:checked + label {
   background-position: -811px -241px; 
   width: 175px;
   height: 169px;
-  zoom: 0.3;
 }

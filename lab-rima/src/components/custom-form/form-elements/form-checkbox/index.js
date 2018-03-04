@@ -9,7 +9,6 @@ class CheckBox extends React.Component{
       <div>
         <input
           id={this.props.config.id}
-          name={this.props.config.name}
           type='checkbox' />
         <label htmlFor={this.props.config.id}></label>
       </div>
