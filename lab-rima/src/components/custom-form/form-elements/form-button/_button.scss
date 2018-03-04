@@ -1,5 +1,20 @@
+$dimgrey: #696969;
+$gainsboro: #DCDCDC;
+
+button {
+  display: inline-block;
+}
+
+button.submit{
+  background-color: $gainsboro;
+  color: $dimgrey;
+  height: 40px;
+  width: 100px;
+  border: 0;
+}
+
 button.submit:hover {
-  background-color: #4CAF50;
+  background-color: $dimgrey;
   color: white;
   transition-duration: 0.4s;
   cursor: pointer;
