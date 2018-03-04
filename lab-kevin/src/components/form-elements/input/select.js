@@ -61,7 +61,7 @@ class CustomSelect extends React.Component{
               className="custom-select-item-radio"
               name="custom-select-item-radio" 
               id={`${this.props.config.name}-custom-select-item-radio-default_selection`}
-              value=""
+              value={JSON.stringify({value: '', text: ''})}
               onClick={this.selectOption}/>
             <label htmlFor={`${this.props.config.name}-custom-select-item-radio-default_selection`}>{this.props.config.reset_msg}</label>
           </li>

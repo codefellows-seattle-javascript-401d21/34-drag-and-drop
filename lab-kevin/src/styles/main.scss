@@ -4,7 +4,7 @@ $light_text_color: #f1ecde;
 $footer_background_color: #9BBFCC;
 $footer_color: #4a7769;
 $input_border: 1px solid $dark_text;
-$input_border_radius: .1em;
+$input_border_radius: .25em;
 $button_background_color: #d5e8d3;
 $button_hover_color:  #bbd6b6;
 $note_background_color: #4a7769;
@@ -32,6 +32,7 @@ h2 {
   span {
     font-size: 0.5em;
     display: block;
+    margin: .25em;
   }
 }
 
@@ -49,6 +50,12 @@ h2 {
     font-size: 1.1em;
     font-weight: bold;
   }
+}
+
+main {
+  margin: 0 auto;
+  width: 90vw;
+  min-width: 400px;
 }
 
 .dash-nav-list {
@@ -79,7 +86,8 @@ h2 {
 
 .category-create, .category-view {
   margin: 0 auto;
-  width: 90vw;
+  width: 100%;
+  max-width: 680px;
 }
 
 .category-form {
@@ -135,15 +143,12 @@ h2 {
   margin-bottom: 10em;
 }
 
-.category-list {
-  width: 90vw;
-  margin: 0 auto;
-}
-
 .category-list-item {
   margin: 1em auto;
   min-height: 12em;
   max-height: 19em;
+  max-width: 600px;
+  min-width: 400px;
   border-radius: $input_border_radius;
   background-color: $note_background_color;
 
@@ -154,13 +159,15 @@ h2 {
   }
   .category-name {
     float: left;
+    margin: .5em;
   }
 
   .category-amount {
     float:right;
+    margin: .5em 3.5em;
   }
 
-  h3, p {
+  h3 {
     width: 80%;
     margin: 0 auto;
     padding-top: 1em;
@@ -171,16 +178,20 @@ h2 {
     color: $dark_text
   }
 
+  div {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+
   p {
-    padding: .5em;
     background-color: $light_text_color;
     font-size: 1.5em;
-    height: 1em;
+    height: 2em;
     border-radius: .2em;
     color: #dc0303;
-    margin: 1em;
-    float: left;
-    width: 60%;
+    margin: 1em auto;
+    width:100%;
   }
 
   button {
@@ -205,10 +216,15 @@ h2 {
   }
 
   .category-delete-btn {
+    position: absolute;
+    top: 0.25em;
+    right: .25em;
+    border-radius: .25em;
+    float: none;
+    margin: 0;
     padding: .25em .75em;
     background-color: $dark_text;
     color: $light_text_color; 
-    margin-top: 1.5em;
     border: 2px solid $light_text_color;
 
     &:hover{
@@ -220,7 +236,7 @@ h2 {
 .expense-list {
   clear: both;
   text-align: center;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   height: 8em;
   overflow: auto;
