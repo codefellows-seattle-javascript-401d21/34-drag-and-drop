@@ -3,6 +3,7 @@ import './styles/main.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
 import FormInput from './form-elements/form-input/index';
+import FormInputValidation from './form-elements/form-input-validation/index';
 import SelectBox from './form-elements/form-selectbox/index';
 import CheckBox from './form-elements/form-checkbox/index';
 import Radio from './form-elements/form-radio/index';
@@ -16,7 +17,6 @@ class CustomForm extends React.Component{
     this.state = {
       inputNoValidation: '',
       inputWithValidation: '',
-      inputValid: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,15 +29,7 @@ class CustomForm extends React.Component{
   };
 
   handleChange(event){
-    if(event.target.name === 'inputWithValidation' && /^[a-zA-Z0-9]+$/.test(event.target.value)){
-      this.setState({[event.target.name]: event.target.value, inputValid: true});
-    }else{
-      this.setState({inputValid: false});
-    };
-
-    if(event.target.name !== 'inputWithValidation'){
-      this.setState({[event.target.name]: event.target.value});
-    };
+    this.setState({[event.target.name]: event.target.value});
   };
 
 
@@ -62,12 +54,14 @@ class CustomForm extends React.Component{
 
             <label>text input w/ validation</label>
 
-            <FormInput
+            <FormInputValidation
               config={({
-                className: this.state.inputValid ? 'form-input-valid' : 'form-input-invalid',
+                className: 'form-input-validation',
                 name: 'inputWithValidation',
                 type: 'text',
-                placeholder: 'Enter text',
+                placeholder: 'Enter username',
+                pattern: '[a-zA-Z0-9]+',
+                errMsg: 'Please enter a valid username',
               })}
               onChange={this.handleChange} />
 

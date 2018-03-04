@@ -1,0 +1,12 @@
+input[type=text] + label {
+  display: none;
+}
+
+input[type=text]:invalid {
+  border: 2px solid red;
+}
+
+input[type=text]:invalid + label {
+  display: block;
+  color: red;
+}
