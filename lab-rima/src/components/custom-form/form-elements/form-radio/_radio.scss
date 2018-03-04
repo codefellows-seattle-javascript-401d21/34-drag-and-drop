@@ -1,0 +1,20 @@
+$icons: url('../../styles/form-elements-sprite.png');
+
+img {
+  border: 0 !important;
+}
+
+.unchecked-radio-icon {
+  background-image: $icons;
+  background-position: -578px -241px; 
+  width: 175px;
+  height: 169px;
+  zoom: 0.3;
+}
+.checked-radio-icon {
+  background-image: $icons;
+  background-position: -811px -241px; 
+  width: 175px;
+  height: 169px;
+  zoom: 0.3;
+}

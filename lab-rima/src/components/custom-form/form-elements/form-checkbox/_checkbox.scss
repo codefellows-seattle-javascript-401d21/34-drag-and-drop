@@ -1,0 +1,16 @@
+$icons: url('../../styles/form-elements-sprite.png');
+
+.uncheckedbox-icon {
+  background-image: $icons;
+  background-position: -159px -240px; 
+  width: 159px;
+  height: 158px;
+  zoom: 0.3;
+}
+.checkedbox-icon {
+  background-image: $icons;
+  background-position: -381px -240px; 
+  width: 160px;
+  height: 157px;
+  zoom: 0.3;
+}

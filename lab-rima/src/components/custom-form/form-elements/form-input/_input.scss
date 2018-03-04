@@ -1,4 +1,6 @@
-input {
-  height: 10px;
-  width: 100px;
+.form-input-invalid{
+  border: 2px solid red;
+}
+.form-input-invalid::after{
+  content: "Please enter a valid username" red;
 }

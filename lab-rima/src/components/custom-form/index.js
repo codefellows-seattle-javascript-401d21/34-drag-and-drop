@@ -5,7 +5,7 @@ import ReactDom from 'react-dom';
 import FormInput from './form-elements/form-input/index';
 import SelectBox from './form-elements/form-selectbox/index';
 import CheckBox from './form-elements/form-checkbox/index';
-import Radio from './form-elements/form-input/index';
+import Radio from './form-elements/form-radio/index';
 import Button from './form-elements/form-button/index';
 
 
@@ -14,21 +14,38 @@ class CustomForm extends React.Component{
     super(props);
 
     this.state = {
-      title: '',
+      inputNoValidation: '',
+      inputWithValidation: '',
+      inputValid: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   };
 
-  handleSubmit(e){
-    e.preventDefault();
+  handleSubmit(event){
+    event.preventDefault();
     console.log(this.state);
   };
 
-  handleChange(e){
-    this.setState({[e.target.name]: e.target.value});
+  handleChange(event){
+    if(event.target.name === 'inputWithValidation' && /^[a-zA-Z0-9]+$/.test(event.target.value)){
+      this.setState({[event.target.name]: event.target.value, inputValid: true});
+    }else{
+      this.setState({inputValid: false});
+    };
+
+    if(event.target.name !== 'inputWithValidation'){
+      this.setState({[event.target.name]: event.target.value});
+    };
   };
+
+  handleClick(event){
+    event.preventDefault();
+    console.log(this.state);
+  };
+
 
   render(){
     return(
@@ -37,30 +54,69 @@ class CustomForm extends React.Component{
 
         <div className="form-container">
           <form onSubmit={this.handleSubmit}>
+
             <FormInput
               config={({
                 className: 'form-input',
-                name: 'title',
-                value: this.state.title,
+                name: 'inputNoValidation',
                 type: 'text',
-                placeholder: 'Enter a text'
+                placeholder: 'Enter text',
               })}
               onChange={this.handleChange} />
 
             <FormInput
               config={({
-                className: 'form-input validation-error',
-                name: 'title',
-                value: this.state.title,
+                className: this.state.inputValid ? 'form-input-valid' : 'form-input-invalid',
+                name: 'inputWithValidation',
                 type: 'text',
-                placeholder: 'Enter a text'
+                placeholder: 'Enter text',
               })}
               onChange={this.handleChange} />
 
-            <SelectBox />
-            <CheckBox />
-            <Radio />
-            <Button />
+            <SelectBox
+              config={({
+                className: 'select-box',
+                classNameOne: 'optionOne',
+                valueOne: 'option 1',
+                classNameTwo: 'optionTwo',
+                valueTwo: 'option 2',
+                classNameThree: 'optionThree',
+                valueThree: 'option 3',
+                classNameFour: 'optionFour',
+                valueFour: 'option 4',
+                classNameFive: 'optionFive',
+                valueFive: 'option 5',
+              })} />
+
+            <CheckBox
+              config={({
+                className: 'uncheckedbox-icon',
+              })}
+              onClick={this.handleClick} />
+            <CheckBox
+              config={({
+                className: 'checkedbox-icon',
+              })}
+              onClick={this.handleClick} />
+
+            <Radio
+              config={({
+                className: 'unchecked-radio-icon',
+              })}
+              onClick={this.handleClick} />
+            <Radio
+              config={({
+                className: 'checked-radio-icon',
+              })}
+              onClick={this.handleClick} />
+
+            <Button
+              config={({
+                className: 'submit',
+                type: 'submit',
+                name: 'submit',
+                buttonText: 'Submit',
+              })} />
 
           </form>
         </div>

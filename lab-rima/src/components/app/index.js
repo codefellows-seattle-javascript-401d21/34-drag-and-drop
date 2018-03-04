@@ -14,8 +14,10 @@ class App extends React.Component{
       <main className="app">
         <Provider store={store}>
           <BrowserRouter>
-            <Route exact path="/customform" component={CustomForm} />
-            <Route exact path="/" component={Dashboard} />
+            <div>
+              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/customform" component={CustomForm} />
+            </div>
           </BrowserRouter>
         </Provider>
       </main>
