@@ -6,10 +6,15 @@ import React from 'react';
 class CheckBox extends React.Component{
   render(){
     return(
-      <div className={this.props.config.className}>
+      <div>
+        <input
+          id={this.props.config.id}
+          name={this.props.config.name}
+          type='checkbox' />
+        <label htmlFor={this.props.config.id}></label>
       </div>
     );
-  };
-};
+  }
+}
 
 export default CheckBox;

@@ -21,7 +21,6 @@ class CustomForm extends React.Component{
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
   };
 
   handleSubmit(event){
@@ -41,11 +40,6 @@ class CustomForm extends React.Component{
     };
   };
 
-  handleClick(event){
-    event.preventDefault();
-    console.log(this.state);
-  };
-
 
   render(){
     return(
@@ -54,6 +48,8 @@ class CustomForm extends React.Component{
 
         <div className="form-container">
           <form onSubmit={this.handleSubmit}>
+
+            <label>text input</label>
 
             <FormInput
               config={({
@@ -64,6 +60,8 @@ class CustomForm extends React.Component{
               })}
               onChange={this.handleChange} />
 
+            <label>text input w/ validation</label>
+
             <FormInput
               config={({
                 className: this.state.inputValid ? 'form-input-valid' : 'form-input-invalid',
@@ -72,6 +70,9 @@ class CustomForm extends React.Component{
                 placeholder: 'Enter text',
               })}
               onChange={this.handleChange} />
+
+
+            <label>select box</label>
 
             <SelectBox
               config={({
@@ -88,18 +89,22 @@ class CustomForm extends React.Component{
                 valueFive: 'option 5',
               })} />
 
+
+            <label>check box</label>
+
             <div className='checkboxes'>
               <CheckBox
                 config={({
-                  className: 'uncheckedbox-icon',
-                })}
-                onClick={this.handleClick} />
+                  id: 'checkboxOne',
+                })} />
               <CheckBox
                 config={({
-                  className: 'checkedbox-icon',
-                })}
-                onClick={this.handleClick} />
+                  id: 'checkboxTwo',
+                })} />
             </div>
+
+
+            <label>radio</label>
 
             <div className='radio-buttons'>
               <Radio
@@ -113,6 +118,9 @@ class CustomForm extends React.Component{
                 })}
                 onClick={this.handleClick} />
             </div>
+
+
+            <label>button</label>
 
             <Button
               config={({
