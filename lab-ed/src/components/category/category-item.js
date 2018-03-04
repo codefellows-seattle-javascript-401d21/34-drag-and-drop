@@ -31,11 +31,8 @@ class CategoryItem extends React.Component {
     return (
         <section className="category-item">
           <div onDoubleClick={this.handleEditing}>
-          <h2>Category</h2>
-          <p>{this.props.category.title}</p>
-          <h3>Budget</h3>
-          <p className="budget">${this.props.category.budget}</p>
-          <button className="deleteButton" onClick={this.handleDelete}>delete</button>
+          <h2 className="cat-display">Category {this.props.category.title} Budget ${this.props.category.budget}</h2>
+          <button className="delete-button" onClick={this.handleDelete}>delete</button>
           </div>
 
           {renderIf(this.state.editing, <CategoryForm

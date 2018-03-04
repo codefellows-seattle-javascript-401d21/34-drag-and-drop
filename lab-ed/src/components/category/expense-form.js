@@ -31,7 +31,7 @@ class ExpenseForm extends React.Component {
 
   render() {
     return  (
-      <div className="three">
+      <section>
         <h2>{this.props.catTitle} expense</h2>
       <form className="expense-form" onSubmit={this.handleSubmit}>
         <input
@@ -42,7 +42,7 @@ class ExpenseForm extends React.Component {
           value={this.state.name}
           onChange={this.handleChange}/>
 
-        <input
+        <input className="test"
           type="number"
           name="price"
           placeholder="price"
@@ -50,9 +50,9 @@ class ExpenseForm extends React.Component {
           value={this.state.price}
           onChange={this.handleChange}/>
 
-        <button type="submit">{this.props.buttonText}</button>
+        <button className="create-exp-button" type="submit">{this.props.buttonText}</button>
       </form>
-      </div>
+      </section>
     )
   }
 }
