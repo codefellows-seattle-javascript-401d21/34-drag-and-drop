@@ -8,14 +8,18 @@ class ExpenseItem extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      //editing: this.props.expense.editing,
       editing: false,
-      expense: this.props.expense,
     };
 
     this.handleDelete = this.handleDelete.bind(this);
     this.handleDoubleClick = this.handleDoubleClick.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleFormUpdate = this.handleFormUpdate.bind(this);
+  }
+
+  handleFormUpdate(formData){
+    this.props.expenseItem_expense_update(formData);
+    this.handleClose();
   }
 
   handleDelete(){
@@ -34,7 +38,6 @@ class ExpenseItem extends React.Component {
   render(){
     return (
       <li className="expense-item" onDoubleClick={this.handleDoubleClick}>
-        {/*<span className="expense-item-timeStamp">{this.props.expense.timeStamp.toDateString()}</span>*/}
         <div>
           <span className="expense-item-name">{this.props.expense.name}</span>
           <span className="expense-item-amount">{this.props.expense.amount}</span>
@@ -44,8 +47,8 @@ class ExpenseItem extends React.Component {
         { this.state.editing ? 
           <Modal onClose={this.handleClose}>
             <CategoryForm submit_text="Re-evaluation" 
-              category={this.state.expense}
-              onComplete={this.props.expenseItem_expense_update}/>
+              category={this.props.expense}
+              onComplete={this.handleFormUpdate}/>
           </Modal >
           : undefined
         }
