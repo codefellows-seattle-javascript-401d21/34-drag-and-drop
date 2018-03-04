@@ -9,14 +9,17 @@ $background-image: url('../images/form-elements-sprite.png');
   outline: none;
 }
 
-input[type="text"] {
+input[type="text"].custom-input {
   padding: .5em 0;
   text-indent: .5em;
+  border: 1px solid lightgrey;
 }
 
+/*
 .custom-validate {
   border: 1px solid lightgrey;
 }
+*/
 
 .custom-validate + label {
   display: block;
@@ -38,7 +41,7 @@ input[type="text"] {
 }
 
 
-input[type="submit"] {
+input[type="submit"].custom-input {
   padding: .5em 1em;
   outline: none;
   background-color: #999;
@@ -55,11 +58,11 @@ input[type="submit"] {
   }
 }
 
-input[type="radio"] {
+input[type="radio"].custom-input {
   display: none;
 }
 
-input[type="radio"] + label {
+ input[type="radio"].custom-input + label {
   cursor: pointer;
   height: 24px;
   width: 24px;
@@ -70,15 +73,15 @@ input[type="radio"] + label {
   display: inline-block;
 }
 
-input[type="radio"]:checked + label { 
+input[type="radio"].custom-input:checked + label { 
   background-position: -111px, -32px;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"].custom-input {
   display: none;
 }
 
-input[type="checkbox"] + label {
+input[type="checkbox"].custom-input + label {
   cursor: pointer;
   height: 24px;
   width: 24px;
@@ -90,10 +93,10 @@ input[type="checkbox"] + label {
 }
 
 
-input[type="checkbox"]:checked + label { 
+input[type="checkbox"].custom-input:checked + label { 
   background-position: -52px, -32px;
 }
 
-input[type="checkbox"]:checked + label + ul{
+input[type="checkbox"].custom-input:checked + label + ul{
   visibility: hidden;
 }

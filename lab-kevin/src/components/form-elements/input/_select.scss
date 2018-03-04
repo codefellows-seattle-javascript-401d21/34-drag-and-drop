@@ -1,0 +1,93 @@
+$background-image: url('../images/form-elements-sprite.png');
+$text-input-border-color: lightgrey;
+$list-item-background-color-odd: #ccc;
+$list-item-background-color-even: #aaa;
+
+.custom-select-wrap {
+  position: relative;
+}
+
+input[type="text"].custom-select-text {
+  padding: .5em 0;
+  text-indent: .5em;
+  border: 1px solid $text-input-border-color;
+}
+
+input[type="checkbox"].custom-select-checkbox {
+  display: none;
+}
+
+input[type="checkbox"].custom-select-checkbox + label {
+  position: relative;
+  display: block;
+}
+
+input[type="checkbox"].custom-select-checkbox + label + ul{
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  text-indent: .5em;
+  border-right: 1px solid $text-input-border-color;
+  border-left: 1px solid $text-input-border-color;
+  border-bottom: 1px solid $text-input-border-color;
+  overflow: auto;
+  max-height: 0;
+  transition: 350ms;
+}
+
+input[type="checkbox"].custom-select-checkbox:checked + label + ul{
+  visibility: visible;
+  display: block;
+  max-height: 7em;
+  transition: 350ms;
+}
+
+.custom-select-list-item{
+  padding: .25em 0;
+  font-size: .75em;
+}
+
+.custom-select-list-item:nth-of-type(odd) {
+  background-color: $list-item-background-color-odd;
+}
+
+.custom-select-list-item:nth-of-type(even) {
+  background-color: $list-item-background-color-even;
+}
+
+input[type="text"].custom-select-text {
+  pointer-events: none;
+}
+
+.custom-select-wrap input[type="radio"].custom-select-item-radio {
+  display: none;
+}
+
+.custom-select-wrap input[type="radio"].custom-select-item-radio + label{
+  width: 100%;
+  display: inline-block;
+}
+
+input[type="checkbox"].custom-select-checkbox + label .custom-select-turn {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  height: 22px;
+  width: 20px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: -152px, -32px;
+  background-image: $background-image;
+  float: right;
+  transition: .350ms;
+}
+
+
+
+input[type="checkbox"].custom-select-checkbox:checked + label .custom-select-turn {
+  top: 1px;
+  background-position: -136px -32px;
+  transition: .350ms;
+}
+

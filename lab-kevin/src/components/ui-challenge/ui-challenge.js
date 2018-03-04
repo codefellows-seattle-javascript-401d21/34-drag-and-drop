@@ -1,11 +1,18 @@
 import React from 'react';
-import {Input} from '../form-elements';
+import {Input, CustomSelect} from '../form-elements';
 import './_ui_challenge.scss';
 
 class UIChallenge extends React.Component{
   constructor(props){
     super(props);
-    this.handleSubmit = this.handleSubmit.bind();
+    this.state = {};
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  
+  handleChange(e){
+    this.setState({[e.target.name]: e.target.value});
   }
 
   handleSubmit(e){
@@ -17,7 +24,7 @@ class UIChallenge extends React.Component{
       <section>
         <h2>UI Challenge</h2>
         <form className="ui-challenge-form" onSubmit={this.handleSubmit} noValidate>
-          <div>
+          <div className="text-input-custom">
             <Input config={{
               name: 'name', 
               type: 'text', 
@@ -26,7 +33,7 @@ class UIChallenge extends React.Component{
             }}/>
           </div>
 
-          <div>  
+          <div className="text-input-custom">  
             <Input config={{
               name: 'username', 
               type: 'text-validate', 
@@ -36,6 +43,29 @@ class UIChallenge extends React.Component{
               pattern: '^[Aa-zZ]{6,18}$', 
               required: 'required',
             }}/>
+          </div>
+
+          <div className="selects-custom">
+            <CustomSelect config={{
+              name: 'options_closed', 
+              class: 'options-select',
+              options: ['Dog', 'Cat', 'Mouse', 'Froggy'],
+              placeholder: 'Please select an option',
+              reset_msg: '-none-',
+              onChange: this.handleChange,
+            }}/>
+          </div>
+
+          <div className="selects-custom big-bottom">
+            <CustomSelect config={{
+              name: 'options_open', 
+              class: 'options-select',
+              options: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+              placeholder: 'Please select an option',
+              reset_msg: '-none-',
+              default: 'checked',
+              onChange: this.handleChange,
+            }}/>   
           </div>
 
           <div className="checkbox-inputs">
@@ -77,18 +107,6 @@ class UIChallenge extends React.Component{
           <div className="submit-inputs">
             <Input config={{name: 'submit', type: 'submit', className: 'submit-btn'}}/>
             <Input config={{name: 'submit', type: 'submit', className: 'submit-btn'}}/>
-          </div>
-
-          <div>
-            <div>
-            <input type="checkbox" name="list"/>
-            <label htmlFor="list"></label>
-            <input type="text"/>
-            <ul>
-              <li>Hello</li>
-              <li>Goodbye</li>
-            </ul>
-            </div>
           </div>
 
         </form>
