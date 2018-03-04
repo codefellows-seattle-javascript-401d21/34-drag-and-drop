@@ -5,22 +5,31 @@ class CustomSelect extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      custom_list: '',
-      custom_select_checked: this.props.config.default || '',
+      custom_list: {
+        text: '',
+        value: '',
+      },
+      custom_select_checked: '',
     };
 
     this.selectOption = this.selectOption.bind(this);
     this.selectToggle = this.selectToggle.bind(this);
+
   }
 
   selectOption(e){
     e.stopPropagation();
     let checked = this.state.custom_select_checked ? '' : 'checked';
+    let values = JSON.parse(e.target.value);
     this.setState(
-      {custom_list: e.target.value,
+      {custom_list: values,
         custom_select_checked: checked,
       }
     );
+    
+    e.target.name = this.props.config.name;
+    e.target.value = values.value;
+    this.props.config.onChange(e);
   }
 
   selectToggle(){
@@ -35,8 +44,8 @@ class CustomSelect extends React.Component{
           name={`${this.props.config.name}-custom-select-checkbox`} 
           id={`${this.props.config.name}-custom-select-checkbox`} 
           className="custom-select-checkbox"
-          checked={this.state.custom_select_checked} 
-          onClick={this.selectToggle}/>
+          checked={this.state.custom_select_checked}
+          onClick={this.selectToggle} />
         <label htmlFor={`${this.props.config.name}-custom-select-checkbox`} >
           <span className='custom-select-turn'></span>
           <input type="text" 
@@ -44,7 +53,7 @@ class CustomSelect extends React.Component{
             name={`${this.props.config.name}-custom-select-text`} 
             id={`${this.props.config.name}-custom-select-text`}  
             placeholder={this.props.config.placeholder} 
-            value={this.state.custom_list} />
+            value={this.state.custom_list.text} />
         </label>
         <ul className="custom-select-list" id={`${this.props.config.name}-custom-select-list`}>
           <li key='default_selection' className="custom-select-list-item">
@@ -58,14 +67,14 @@ class CustomSelect extends React.Component{
           </li>
 
           {this.props.config.options.map((optionVal, i) => (
-            <li key={optionVal} className="custom-select-list-item">
+            <li key={optionVal.text} className="custom-select-list-item">
               <input type="radio"
                 className="custom-select-item-radio"
                 name="custom-select-item-radio" 
                 id={`custom-select-item-radio-${this.props.config.name}-${i}`}
-                value={optionVal} 
+                value={JSON.stringify(optionVal)} 
                 onClick={this.selectOption}/>
-              <label htmlFor={`custom-select-item-radio-${this.props.config.name}-${i}`}>{optionVal}</label>
+              <label htmlFor={`custom-select-item-radio-${this.props.config.name}-${i}`}>{optionVal.text}</label>
             </li>
           ))}
         </ul>

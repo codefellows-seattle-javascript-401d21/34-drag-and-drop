@@ -12,6 +12,7 @@ class UIChallenge extends React.Component{
 
   
   handleChange(e){
+    console.log(e.target.name);
     this.setState({[e.target.name]: e.target.value});
   }
 
@@ -47,10 +48,10 @@ class UIChallenge extends React.Component{
 
           <div className="selects-custom">
             <CustomSelect config={{
-              name: 'options_closed', 
-              class: 'options-select',
-              options: ['Dog', 'Cat', 'Mouse', 'Froggy'],
-              placeholder: 'Please select an option',
+              name: 'pets', 
+              class: 'pets-select',
+              options: [{value:'./images/dog.jpg', text: 'Dog'}, {value:'./images/cat.jpg', text: 'Cat'}, {value:'./images/mouse.jpg', text: 'Mouse'}, {value:'./images/froggy.jpg', text: 'Froggy'}],
+              placeholder: 'Please select a pet',
               reset_msg: '-none-',
               onChange: this.handleChange,
             }}/>
@@ -58,12 +59,12 @@ class UIChallenge extends React.Component{
 
           <div className="selects-custom big-bottom">
             <CustomSelect config={{
-              name: 'options_open', 
+              name: 'options', 
               class: 'options-select',
-              options: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
+              options: [{value:'Option_1', text: 'Option 1'}, {value:'Option_2', text: 'Option 2'},  {value:'Option_3', text: 'Option 3'},  {value:'Option_4', text: 'Option 4'},  {value:'Option_5', text: 'Option 5'}],
               placeholder: 'Please select an option',
               reset_msg: '-none-',
-              default: 'checked',
+              defaultChecked: 'defaultChecked',
               onChange: this.handleChange,
             }}/>   
           </div>
