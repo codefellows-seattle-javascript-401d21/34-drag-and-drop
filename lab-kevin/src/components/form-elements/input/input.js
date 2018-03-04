@@ -30,7 +30,7 @@ class Input extends React.Component{
 
   needsLabel(labelProps){
     if (!labelProps.needsLabel) return;
-    return <label htmlFor={this.props.config.id}>{labelProps.labelText}</label>;
+    return <label className={`${this.props.config.type}-label`} htmlFor={this.props.config.id}>{labelProps.labelText}</label>;
   }
 
   setAttributes(config){

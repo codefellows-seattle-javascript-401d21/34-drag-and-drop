@@ -10,7 +10,15 @@
   margin-bottom: 1em;
 }
 
-.name-input, .username-input {
+.selects-custom, .text-input-custom {
+  padding-bottom: 1.5em;
+}
+
+.selects-custom.big-bottom {
+  padding-bottom: 8em;
+}
+
+.name-input, .username-input, .custom-select-text {
   width: 100%;
   max-width: 600px;
 }
@@ -34,4 +42,13 @@
 
 .submit-inputs .custom-input-wrap {
   @extend %inline-layout;
+}
+
+
+#pets-custom-select-list{
+  z-index: 10;
+}
+
+#options-custom-select-list{
+  z-index: 9;
 }
