@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import createStore from '../lib/store';
 import Dashboard from './dashboard/dashboard';
+import UiChallenge from './uichallenge/uichallenge';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 const store = createStore();
@@ -9,7 +10,7 @@ const store = createStore();
 class App extends React.Component {
   render() {
     return (
-      <main className='application'>
+      <main className='full-content'>
         <Provider store={store}>
           <BrowserRouter>
             <div>
@@ -20,12 +21,13 @@ class App extends React.Component {
                     <ul>
                       <li><a href='/'>Home</a></li>
                       <li><a href='/'>Dashboard</a></li>
-                      <li><a href='/'>CustomCSS</a></li>
+                      <li><a href='/uichallenge'>UiChallenge</a></li>
                     </ul>
                   </nav>
                 </div>
               </header>
               <Route exact path='/' component={Dashboard} />
+              <Route exact path='/uichallenge' component={UiChallenge} />
             </div>
           </BrowserRouter>
         </Provider>
