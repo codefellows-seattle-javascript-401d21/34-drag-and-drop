@@ -1,4 +1,5 @@
 import React from 'react';
+import './_category-form.scss';
 
 class CategoryForm extends React.Component {
   constructor(props) {
@@ -9,6 +10,8 @@ class CategoryForm extends React.Component {
         name: '',
         budget: '',
       };
+    // class to be applied to the category form
+    this.state.formClassName = this.props.formClassName;
 
     // Binding Handlers
     Object.getOwnPropertyNames(CategoryForm.prototype)
@@ -28,7 +31,7 @@ class CategoryForm extends React.Component {
 
   render() {
     return (
-      <form className="category-form" onSubmit={this.handleSubmit}>
+      <form className={this.state.formClassName} onSubmit={this.handleSubmit}>
         <input
           className='category-name-input'
           type='text'
@@ -47,7 +50,7 @@ class CategoryForm extends React.Component {
           onChange={this.handleChange}
         />
 
-        <button type='submit'>{this.props.buttonText}</button>
+        <button className='form-btn' type='submit'>{this.props.buttonText}</button>
       </form>
     );
   }

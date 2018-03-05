@@ -27,11 +27,12 @@ class ExpenseItem extends React.Component {
 
   render() {
     return (
-      <div>
-        <h4>Expense: {this.props.expense.name}</h4>
-        <p>Cost: {this.props.expense.cost}</p>
-        <button onClick={this.handleDelete}>Delete</button>
-        <button onClick={this.handleEditMode}>Edit</button>
+      <div className='expense-div'>
+        <section className='edit-section' onDoubleClick={this.handleEditMode}>
+          <h4 className='item-title whitetext'>{this.props.expense.name}</h4>
+          <h4 className='redtext'>{'\u0024'} -{this.props.expense.cost}</h4>
+          <button className='delete-btn' onClick={this.handleDelete}>{'\u2718'}</button>
+        </section>
         {renderIf(this.state.editmode,
           <ExpenseForm
             expense={this.props.expense}

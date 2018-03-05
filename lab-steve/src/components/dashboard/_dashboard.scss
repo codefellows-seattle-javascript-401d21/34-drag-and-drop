@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import '../../styles/variables.scss';
+
+.centsmart-section {
+  max-width: 90%;
+  margin: 2rem auto;
+  border: 5px solid $green;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: $lightgreen;
+}
+
+.page-subtitle {
+  font-family: Pacifico, cursive;
+  color: $fontcolor;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.centsmart-section input[type=text],
+.centsmart-section input[type=number] {
+  box-sizing: border-box;
+  border: 3px solid $darkgreen;
+  padding: 13px 20px;
+  margin: 12px 3px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: $green;
+  color: $fontcolor;
+
+  &::placeholder {
+    color: $fontcolor;
+  }
+}
+
+.centsmart-section input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.centsmart-section input[type=number]::-webkit-inner-spin-button,
+.centsmart-section input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.centsmart-section button {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  color: $fontcolor;
+}
+
+.delete-btn {
+  font-size: 25px;
+  padding: 0 5px;
+  border: 3px solid $darkred;
+  background-color: $red;
+  display: inline-block;
+
+  &:hover {
+    background-color: $darkred;
+  }
+}
+
+.form-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 90px;
+  border: 3px solid $darkgreen;
+  background-color: $green;
+
+  &:hover {
+    background-color: $darkgreen;
+  }
+}
+
+.edit-section h4 {
+  font-family: 'Work Sans', Helvetica;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 40px;
+}
+
+.edit-section .item-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 26px;
+}
+
+.greentext {
+  color: $darkgreen;
+}
+
+.redtext {
+  color: $red;
+}
+
+.whitetext {
+  color: white;
+}
+
+.expense-div {
+  margin-left: 40px;
+}
+
+.category-item {
+  border: 3px solid $darkgreen;
+  border-radius: 10px;
+  margin: 10px 125px;
+  padding: 10px;
+  text-align: center;
+}
