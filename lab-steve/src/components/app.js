@@ -36,6 +36,8 @@ class App extends React.Component {
   }
 }
 
-// color: #7AC795
-// color green light: #F2FFF7
+// dark green: #529C6F
+// green: #7AC795
+// light green: #c6e6c3
+
 export default App;

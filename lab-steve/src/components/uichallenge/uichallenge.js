@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from '../form-elements/input/input';
+import './_uichallenge.scss';
 
 class UiChallenge extends React.Component {
   constructor(props) {
@@ -23,23 +24,24 @@ class UiChallenge extends React.Component {
   render() {
     return (
       <section className='ui-challenge'>
-        <h1>UI Challenge</h1>
+        <h1 className='page-title'>UI Challenge</h1>
         <form className='ui-challenge-form' noValidate onSubmit={this.handleSubmit}>
           <div className='form-section'>
             <Input config={{
+              title: 'Non Validating Textbox',
               attrs: {
                 name: 'inputwovalidate',
                 type: 'text',
                 className: 'input-wo-validate',
                 placeholder: 'Name',
               },
-              title: 'Non Validating Textbox',
             }}
             />
           </div>
 
           <div className='form-section'>
             <Input config={{
+              title: 'Validating Textbox',
               attrs: {
                 name: 'inputwvalidate',
                 type: 'text',
@@ -47,9 +49,78 @@ class UiChallenge extends React.Component {
                 placeholder: 'Username',
                 pattern: '[a-zA-Z0-9_-]*',
               },
-              title: 'Validating Textbox',
               validate: {
                 errorStr: 'please enter a valid username',
+              },
+            }}
+            />
+          </div>
+
+          <div className='form-section'>
+            <Input config={{
+              title: 'Text Boxes',
+              attrs: {
+                id: 'cbox-left',
+                name: 'cboxleft',
+                type: 'checkbox',
+                defaultChecked: true,
+              },
+              forLabel: true,
+            }}
+            />
+            <Input config={{
+              attrs: {
+                id: 'cbox-right',
+                name: 'cboxright',
+                type: 'checkbox',
+                defaultChecked: false,
+              },
+              forLabel: true,
+            }}
+            />
+          </div>
+
+          <div className='form-section'>
+            <Input config={{
+              title: 'Radio buttons',
+              attrs: {
+                id: 'radio-left',
+                name: 'radioleft',
+                type: 'radio',
+                defaultChecked: true,
+              },
+              forLabel: true,
+            }}
+            />
+            <Input config={{
+              attrs: {
+                id: 'cbox-right',
+                name: 'radioright',
+                type: 'radio',
+                defaultChecked: false,
+              },
+              forLabel: true,
+            }}
+            />
+          </div>
+
+          <div className='form-section'>
+            <Input config={{
+              title: 'Buttons',
+              attrs: {
+                name: 'btnleft',
+                type: 'button',
+                className: 'col-1-btn',
+                value: 'submit',
+              },
+            }}
+            />
+            <Input config={{
+              attrs: {
+                name: 'btnright',
+                type: 'button',
+                className: 'col-2-btn',
+                value: 'submit',
               },
             }}
             />
