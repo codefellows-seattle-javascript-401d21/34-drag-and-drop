@@ -1,3 +1,5 @@
+import './_category-item.scss';
+
 import React from 'react';
 import {connect} from 'react-redux';
 import {categoryUpdate} from '../../action/category-action';
@@ -44,8 +46,9 @@ class CategoryItem extends React.Component{
   render(){
     return <li
       key={this.props.key}
+      className="category-item-li"
     >
-      <h3 onDoubleClick={this.handleDoubleClick}>{this.props.categoryItem.name}: {this.props.categoryItem.budget}</h3>
+      <h3 onDoubleClick={this.handleDoubleClick}><span>{this.props.categoryItem.name}: {this.props.categoryItem.budget}</span></h3>
 
       <button
         className="delete"

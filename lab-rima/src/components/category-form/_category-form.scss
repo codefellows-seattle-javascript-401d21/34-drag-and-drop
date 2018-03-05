@@ -1,7 +1,7 @@
-input.expense-name, input.price {
+input.name, input.budget {
   height: 25px;
-  margin-left: 5px;
   width: 30%;
+  margin-right: 5px;
 }
 
 button.save, button.update {
@@ -20,3 +20,6 @@ button.delete, button.cancel {
   color: white;
 }
 
+form.category-form {
+  margin-top: 1em;
+}

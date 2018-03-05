@@ -1,3 +1,5 @@
+import './_category-form.scss';
+
 import React from 'react';
 import {renderIf} from '../../lib/utils';
 
@@ -61,7 +63,7 @@ class CategoryForm extends React.Component{
           name="name"
           value={this.state.name}
           onChange={this.handleChange}
-          placeholder="Enter a name"/>
+          placeholder="category"/>
 
         <input
           className="budget"

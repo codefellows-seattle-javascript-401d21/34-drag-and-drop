@@ -61,12 +61,12 @@ class ExpenseForm extends React.Component{
         id="expense-form">
 
         <input
-          className="name"
+          className="expense-name"
           type="text"
           name="name"
           value={this.state.name}
           onChange={this.handleChange}
-          placeholder="Enter a name"/>
+          placeholder="item"/>
 
         <input
           className="price"
