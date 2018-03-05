@@ -24,6 +24,10 @@ class Uichallenge extends React.Component {
             <p id="input-error" className="red">please enter a valid username</p>
           </div>
         </form>
+        <form className="form-three">
+          <p>select box</p>
+          <input required className="input select1" type="text" placeholder="please select an option..."/>
+        </form>
         <form>
           <p>checkbox</p>
           <input className="input-check1" type="checkbox"/>

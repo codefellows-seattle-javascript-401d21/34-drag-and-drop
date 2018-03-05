@@ -20,7 +20,7 @@ p {
   flex-direction: column;
   justify-content: column;
   background-color: #fff;
-  height: 1100px;
+  height: 1160px;
   width: 600px;
   margin: 0 auto;
   border: 1px solid;
@@ -36,8 +36,13 @@ p {
 }
 
 .form-two {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
+
+.form-three {
+  margin-bottom: 80px;
+}
+
 .input {
   width: 100%;
   padding: 12px;
@@ -87,7 +92,7 @@ p {
 
 .input-check1 {
   position: absolute;
-  top: 556px;
+  top: 690px;
   left: 58px;
   width: 54px;
   height: 54px;
@@ -100,7 +105,7 @@ p {
 
 .input-check2 {
   position: absolute;
-  top: 556px;
+  top: 690px;
   left: 136px;
   width: 54px;
   height: 54px;
@@ -121,7 +126,7 @@ p {
 
 .input-radio1 {
   position: absolute;
-  top: 757px;
+  top: 870px;
   left: 58px;
   width: 54px;
   height: 54px;
@@ -129,7 +134,8 @@ p {
 }
 
 .input-radio1:checked + div {
-  background-position: -123px -80px;
+  background-position: -267px -80px;
+
 }
 
 .radio2 {
@@ -143,14 +149,14 @@ p {
 .input-radio2 {
   position: absolute;
   top: 757px;
-  left: 58px;
+  left: 158px;
   width: 54px;
   height: 54px;
   opacity: 0;
 }
 
 .input-radio2:checked + div {
-  background-position: -267px -80px;
+  background-position: -190px -80px;
 }
 
 .in-border-focus {
