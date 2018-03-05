@@ -1,81 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-@import url("reset.css");
-
-// ========================= BASE ========================= //
-
-$font-stack: Raleway, sans-serif;
-$background-color: #fff;
-$primary-color: #000;
-$secondary-color: #666;
-$tertiary-color: #ddd;
-$link-color: #aaa;
-$hover-color: #ccc;
-$invalid-color: #c60101;
-
-%borders {
-    border: solid 1px $secondary-color;
-    border-radius: 0.1em;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    width: 100%;
-    background: $background-color;
-    color: $primary-color;
-    font: 100% $font-stack;
-    line-height: 1.5em;
-    word-spacing: 0.1em;
-    letter-spacing: 0.07em;
-}
-
-#wrapper {
-    width: 80%;
-    max-width: 35em;
-    margin: 2em auto;
-}
-
-a {
-    color: $link-color;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 900;
-}
-
-h1 {
-    margin: 1em;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 900;
-    line-height: 1.5em;
-    letter-spacing: 0.02em;
-    text-decoration: underline;
-}
-
-h2 {
-    margin: 0.5em 0 0 0;
-    font-size: 1.2em;
-    font-weight: 900;
-}
-
-.center {
-    text-align: center;
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 // ========================= FORM ========================= //
 
 form {
@@ -122,10 +44,6 @@ form {
 
         &::placeholder {
             color: $tertiary-color;
-        }
-
-        &[type=text] {
-            width: 100%;
         }
 
         &:invalid {
@@ -218,7 +136,6 @@ form {
 
     select {
         @extend %borders;
-        width: 100%;
         overflow: hidden;
         padding: 0.7em;
         color: $secondary-color;
@@ -237,7 +154,7 @@ form {
     button, input[type=submit] {
         @extend %formelements;
         margin: 0.5em 1em 2em 0;
-        padding: 0.8em 2em;
+        padding: 0.7em 2em;
         background: $tertiary-color;
         transition-duration: 0.25s;
 
@@ -251,22 +168,4 @@ form {
             transform: scale(1.1);
         }
     }
-}
-
-// ========================= LAYOUT ========================= //
-
-.btn-active {
-    color: $background-color !important;
-    background: $primary-color !important;
-}
-
-#input-error {
-    visibility: hidden;
-    margin: -1.9em 0 2.5em 0;
-    text-align: right;
-    color: $invalid-color;
-}
-
-#validated-input:invalid + #input-error {
-  visibility: visible;
 }
