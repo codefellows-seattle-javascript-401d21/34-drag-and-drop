@@ -39,7 +39,7 @@ class CustomForm extends React.Component{
         <h1>Custom Form</h1>
 
         <div className="form-container">
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} >
 
             <label>text input</label>
 
