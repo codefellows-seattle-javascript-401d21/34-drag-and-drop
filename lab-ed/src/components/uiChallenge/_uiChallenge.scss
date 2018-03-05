@@ -1,0 +1,210 @@
+body {
+  background-color: #ddd;
+}
+
+h1 {
+  font-size: 20px;
+  text-decoration: underline;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font: bold;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: column;
+  background-color: #fff;
+  height: 1160px;
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid;
+  position: relative;
+}
+
+.margin {
+  margin: 20px 60px;
+}
+
+.form-one {
+  margin-bottom: 40px;
+}
+
+.form-two {
+  margin-bottom: 30px;
+}
+
+.form-three {
+  margin-bottom: 80px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+}
+
+.red {
+  color: red;
+  font-size: 16px;
+  margin-left: 286px;
+}
+
+.small-text  {
+  font-size: 15px;
+  font-style: italic;
+  color: #777;
+  margin-bottom: 60px;
+}
+
+.em-bold{
+  color: #222;
+}
+
+.checkbox1, .checkbox2, .radio1, .radio2 {
+  background-image: url('form-elements-sprite.png');
+  background-repeat: no-repeat;
+  background-size: 480px 220px;
+}
+
+.checkbox1 {
+  height: 80px;
+  width: 70px;
+  background-position: -50px -80px;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.checkbox2 {
+  height: 80px;
+  width: 70px;
+  background-position: -120px -80px;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.input-check1 {
+  position: absolute;
+  top: 690px;
+  left: 58px;
+  width: 54px;
+  height: 54px;
+  opacity: 0;
+}
+
+.input-check1:checked + div {
+  background-position: -123px -80px;
+}
+
+.input-check2 {
+  position: absolute;
+  top: 690px;
+  left: 136px;
+  width: 54px;
+  height: 54px;
+  opacity: 0;
+}
+
+.input-check2:checked + div {
+  background-position: -47px -80px;
+}
+
+.radio1 {
+  height: 80px;
+  width: 70px;
+  background-position: -191px -80px;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.input-radio1 {
+  position: absolute;
+  top: 870px;
+  left: 58px;
+  width: 54px;
+  height: 54px;
+  opacity: 0;
+}
+
+.input-radio1:checked + div {
+  background-position: -267px -80px;
+
+}
+
+.radio2 {
+  height: 80px;
+  width: 70px;
+  background-position: -266px -80px;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.input-radio2 {
+  position: absolute;
+  top: 757px;
+  left: 158px;
+  width: 54px;
+  height: 54px;
+  opacity: 0;
+}
+
+.input-radio2:checked + div {
+  background-position: -190px -80px;
+}
+
+.in-border-focus {
+  visibility: hidden;
+}
+
+.button-one {
+  border: none;
+  background-color:#ddd;
+  color: #000;
+  padding: 14px 40px;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.button-two {
+  border: none;
+  background-color:#ddd;
+  padding: 14px 40px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
+.hover-one:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.hover-two:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+#validated-input:focus {
+  outline: none;
+}
+
+#input-error {
+  visibility: hidden;
+  color: red;
+}
+
+#validated-input:not(:placeholder-shown):invalid {
+  border: 1px solid red;
+}
+
+#validated-input:not(:placeholder-shown):invalid + #input-error {
+  visibility: visible;
+}

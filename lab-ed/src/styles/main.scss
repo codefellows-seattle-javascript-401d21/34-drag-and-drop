@@ -1,0 +1,96 @@
+body {
+  background-color: #ddd;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px 250px;
+  grid-template-rows: 150px 150px 150px 150px 150px 150px 150px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.one {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border: 2px solid #bbb;
+}
+
+.two {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.three {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border: 2px solid #bbb;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+button:focus {
+  outline:0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: blue;
+}
+
+input {
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.noteContent {
+  text-align: center;
+}
+
+.cat-display {
+  display: inline-block;
+}
+
+.delete-button {
+  display: inline-block;
+  color: red;
+  margin-left: 60px;
+}
+
+.test {
+  display: inline-block;
+}
+
+.create-exp-button {
+  display: inline;
+  color: red;
+  margin-left: 60px;
+}
