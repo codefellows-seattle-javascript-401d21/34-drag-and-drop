@@ -1,3 +1,5 @@
+import './_expense-form.scss';
+
 import React from 'react';
 import {renderIf} from '../../lib/utils';
 
