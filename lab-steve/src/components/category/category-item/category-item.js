@@ -12,6 +12,7 @@ class CategoryItem extends React.Component {
     super(props);
     this.state = {
       editmode: false,
+      expenseaddmode: false,
     };
 
     // Binding Handlers
@@ -28,26 +29,51 @@ class CategoryItem extends React.Component {
     this.setState({ editmode: !this.state.editmode });
   }
 
+  handleExpenseToggle() {
+    this.setState({ expenseaddmode: !this.state.expenseaddmode });
+  }
+
+  calcRemainingBudget() {
+    let budget = parseInt(this.props.category.budget);
+
+    return budget - this.props.expenses[this.props.category._id]
+      .reduce((acc, exp) => acc + parseInt(exp.cost), 0);
+  }
+
+  calcRedGreenClass() {
+    let className = 'item-title';
+    if (this.calcRemainingBudget() >= 0) {
+      return className.concat(' greentext');
+    }
+    return className.concat(' redtext');
+  }
+
   render() {
     return (
       <div className='category-item'>
-        <h4>Category: {this.props.category.name}</h4>
-        <p>Budget: {this.props.category.budget}</p>
-        <button onClick={this.handleDelete}>Delete</button>
-        <button onClick={this.handleEditMode}>Edit</button>
+        <section className='edit-section' onDoubleClick={this.handleEditMode}>
+          <h4 className={this.calcRedGreenClass()}>{this.props.category.name}</h4>
+          <h4 className={this.calcRedGreenClass()}>
+            {'\u0024'}{this.calcRemainingBudget()}
+          </h4>
+          <button className='delete-btn' onClick={this.handleDelete}>{'\u2718'}</button>
+        </section>
         {renderIf(this.state.editmode,
           <CategoryForm
             category={this.props.category}
+            formClassName='category-form'
             buttonText='Update'
             onComplete={this.props.categoryItemUpdate}
           />
         )}
-        <h5>Add an Expense</h5>
-        <ExpenseForm
-          buttonText='Create'
-          categoryId={this.props.category._id}
-          onComplete={this.props.expenseItemCreate}
-        />
+        <button className='form-btn' onClick={this.handleExpenseToggle}>Create Expense</button>
+        {renderIf(this.state.expenseaddmode,
+          <ExpenseForm
+            buttonText='Create'
+            categoryId={this.props.category._id}
+            onComplete={this.props.expenseItemCreate}
+          />
+        )}
         {renderIf(this.props.expenses[this.props.category._id].length,
           this.props.expenses[this.props.category._id].map(exp => (
             <ExpenseItem

@@ -9,10 +9,12 @@ class Dashboard extends React.Component {
   render() {
     return (
       <section className='container'>
-        <h1 className='page-title'>Expense Tracker</h1>
+        <h1 className='page-title'>Cash Flow Tracker</h1>
 
         <section className='centsmart-section'>
+          <h2 className='page-subtitle'>Create Budget</h2>
           <CategoryForm
+            formClassName='primary-category-form'
             buttonText='Create'
             onComplete={this.props.dashboardCategoryCreate}
           />
