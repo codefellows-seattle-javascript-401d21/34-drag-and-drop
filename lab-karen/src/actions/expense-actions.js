@@ -12,6 +12,7 @@ export const expenseCreate = expense => {
 export const expenseUpdate = expense => ({
   type: 'EXPENSE_UPDATE',
   payload: expense,
+
 });
 
 export const expenseDelete = expense => ({

@@ -1,9 +1,10 @@
-// import '../../../styles/reset.scss';
-// import '../../../styles/main.scss';
-
 import React from 'react';
 import ReactDom from 'react-dom';
 import FormInput from './form-elements/input/input';
+import Button from './form-elements/button/button';
+import Radio from './form-elements/radio/radio';
+import Checkbox from './form-elements/checkbox/checkbox';
+import Select from './form-elements/select/select';
 
 class UIchallenge extends React.Component {
   constructor(props) {
@@ -46,14 +47,41 @@ class UIchallenge extends React.Component {
           </form>
         </div>
 
+        <Select
+          config={({
+            menuName: this.state.dropDown || 'Please select an option',
+            item1: 'option 1',
+            item2: 'option 2',
+            item3: 'option 3',
+            item4: 'option 4',
+            item5: 'option 5',
+          })}
+          onChange={this.handleChange}/>
+
+        <Checkbox
+          config={({
+            divName: 'checkbox-div',
+            labelName: 'checkbox-label',
+            id: 'check-box',
+            name: 'checkbox',
+          })}/>
+
+
+        <Radio
+          config={({
+            name: 'radio-one',
+            divName: 'radio-btn-div',
+            labelName: 'radio-btn-label',
+            id: 'radio-button',
+          })}/>
+
+
         <Button
           config={({
-            id: 'button-one',
             className: 'buttons',
             name: 'button-one',
-          })}
-          onChange={this.handleSubmit}/>
-
+            text: 'submit',
+          })}/>
       </div>
     );
   }
