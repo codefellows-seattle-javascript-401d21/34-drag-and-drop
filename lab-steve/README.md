@@ -7,6 +7,9 @@
 This is a simple budget tracking application. It allows users to create a budget and track
 expenses against that budget.
 
+![home](./images/dashboard.jpg)
+![uichallenge](./images/uichallenge.jpg)
+
 ## Getting Started
 - Clone the repository to your local directory from [here](https://github.com/stevegcarpenter/31-redux)
 - Install all the necessary modules using the `npm install` command
