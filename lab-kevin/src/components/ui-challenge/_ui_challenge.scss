@@ -1,0 +1,54 @@
+
+.ui-challenge-form {
+  width: 90vw;
+  max-width: 600px;
+  min-width: 460px;
+  margin: 2em auto;
+}
+
+.name-input {
+  margin-bottom: 1em;
+}
+
+.selects-custom, .text-input-custom {
+  padding-bottom: 1.5em;
+}
+
+.selects-custom.big-bottom {
+  padding-bottom: 8em;
+}
+
+.name-input, .username-input, .custom-select-text {
+  width: 100%;
+  max-width: 600px;
+}
+
+.checkbox-inputs, .radio-inputs, .submit-inputs {
+  padding-bottom: 1em;
+}
+
+%inline-layout {
+  display: inline;
+  margin: .25em;
+}
+
+.checkbox-inputs .custom-input-wrap  {
+  @extend %inline-layout;
+}
+
+.radio-inputs .custom-input-wrap {
+  @extend %inline-layout;
+}
+
+.submit-inputs .custom-input-wrap {
+  @extend %inline-layout;
+}
+
+
+#pets-custom-select-list{
+  z-index: 10;
+}
+
+#options-custom-select-list{
+  z-index: 9;
+}
