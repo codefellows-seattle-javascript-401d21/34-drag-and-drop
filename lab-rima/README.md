@@ -18,4 +18,4 @@ npm install
 ```
 npm run build
 ```
-4. Go to localhost:8080/ to add categories and budgets.
+4. Go to localhost:8080/ to add categories and budgets. For customform, go to localhost:8080/customform
