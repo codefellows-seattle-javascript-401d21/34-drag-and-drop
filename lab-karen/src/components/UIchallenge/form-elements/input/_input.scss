@@ -10,14 +10,17 @@
 
 .container {
   width: 80%;
-  margin: 4vw auto;
-  font-family: helvetica;
+  margin-left: 100px;
+  margin-top: 10px;
   position: relative;
+}
+
+.form-inputs {
+  margin-left: 0%;
 }
 
 .container label {
   display: block;
-  font-weight: bold;
   padding: 2vw 0;
 }
 
@@ -25,7 +28,7 @@
   visibility: hidden;
   position: absolute;
   color: red;
-  font-size: 2vw;
+  font-size: 100%;
   right: 10%;
 }
 

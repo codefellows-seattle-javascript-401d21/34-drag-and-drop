@@ -1,22 +1,21 @@
-import '/._button.scss';
+import './_button.scss';
 import React from 'react';
 
 class Button extends React.Component {
   render() {
     return (
-      <div className={this.props.config.className}
-        name: {this.props.config.name}
-        value:
-    )
+      <div className='button-div'>
+        <h4> Submit Button </h4>
+        <button
+          type='submit'
+          className={this.props.config.className}
+          name={this.props.config.name}
+          onChange={this.props.onChange}>
+          {this.props.config.text}
+        </button>
+      </div>
+    );
   }
 }
 
-
-<Button
-  config={({
-    id: 'button-one',
-    className: 'buttons',
-    value: this.state.buttonOne,
-    name: 'button-one',
-  })}
-  onChange={this.handleSubmit}/>
+export default Button;
