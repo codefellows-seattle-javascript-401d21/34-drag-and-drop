@@ -3,29 +3,11 @@ import Input from '../form-elements/input/input';
 import './_uichallenge.scss';
 
 class UiChallenge extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-
-    // Binding Handlers
-    Object.getOwnPropertyNames(UiChallenge.prototype)
-      .filter(prop => prop.startsWith('handle'))
-      .map(prop => this[prop] = this[prop].bind(this));
-  }
-
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-  }
-
   render() {
     return (
       <section className='ui-challenge'>
         <h1 className='page-title'>UI Challenge</h1>
-        <form className='ui-challenge-form' noValidate onSubmit={this.handleSubmit}>
+        <form className='ui-challenge-form' noValidate>
           <div className='form-section'>
             <Input config={{
               title: 'Non Validating Textbox',
@@ -56,9 +38,10 @@ class UiChallenge extends React.Component {
             />
           </div>
 
+          <h4>Checkboxes</h4>
           <div className='form-section'>
             <Input config={{
-              title: 'Text Boxes',
+              divClass: 'col-2-div',
               attrs: {
                 id: 'cbox-left',
                 name: 'cboxleft',
@@ -69,6 +52,7 @@ class UiChallenge extends React.Component {
             }}
             />
             <Input config={{
+              divClass: 'col-2-div',
               attrs: {
                 id: 'cbox-right',
                 name: 'cboxright',
@@ -80,12 +64,13 @@ class UiChallenge extends React.Component {
             />
           </div>
 
+          <h4>Radio buttons</h4>
           <div className='form-section'>
             <Input config={{
-              title: 'Radio buttons',
+              divClass: 'col-2-div',
               attrs: {
                 id: 'radio-left',
-                name: 'radioleft',
+                name: 'radiobtn',
                 type: 'radio',
                 defaultChecked: true,
               },
@@ -93,9 +78,10 @@ class UiChallenge extends React.Component {
             }}
             />
             <Input config={{
+              divClass: 'col-2-div',
               attrs: {
-                id: 'cbox-right',
-                name: 'radioright',
+                id: 'radio-right',
+                name: 'radiobtn',
                 type: 'radio',
                 defaultChecked: false,
               },
@@ -104,9 +90,10 @@ class UiChallenge extends React.Component {
             />
           </div>
 
+          <h4>Buttons</h4>
           <div className='form-section'>
             <Input config={{
-              title: 'Buttons',
+              divClass: 'col-2-div',
               attrs: {
                 name: 'btnleft',
                 type: 'button',
@@ -116,6 +103,7 @@ class UiChallenge extends React.Component {
             }}
             />
             <Input config={{
+              divClass: 'col-2-div',
               attrs: {
                 name: 'btnright',
                 type: 'button',

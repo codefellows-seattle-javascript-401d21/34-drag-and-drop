@@ -45,7 +45,7 @@ class Input extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={this.config.divClass ? this.config.divClass : 'form-div-wrapper'}>
         {this.config.title}
         <input {... this.config.attrs} />
         {this.config.validate}
