@@ -1,0 +1,44 @@
+@import '../../../styles/variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400');
+
+/* section titles */
+.form-section h4 {
+  font-family: 'Work Sans', Helvetica;
+  font-size: 1.3rem;
+  color: $fontcolor;
+}
+
+.ui-challenge-form input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 20px;
+  margin: 12px 0;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: $green;
+}
+
+/* no validation field */
+.ui-challenge-form input[class="input-wo-validate"] {
+  border: 3px solid $darkgreen;
+}
+
+/* validation field w/ error message */
+.ui-challenge-form input[class="input-w-validate"]:valid {
+  border: 3px solid $darkgreen;
+}
+.ui-challenge-form input[class="input-w-validate"]:invalid {
+  border: 3px solid $errormsgcolor;
+}
+.ui-challenge-form input[class="input-w-validate"]:valid ~ .error-message {
+  visibility: hidden;
+}
+.ui-challenge-form input[class="input-w-validate"]:invalid ~ .error-message {
+  visibility: visible;
+}
+
+.error-message {
+  color: $errormsgcolor;
+  text-align: right;
+}
