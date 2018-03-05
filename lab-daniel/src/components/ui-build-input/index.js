@@ -56,12 +56,11 @@ class UiBuildInput extends React.Component {
             name={this.props.config.name}
             value={this.props.config.value}
             onChange={this.props.config.onChange}
-          />
+          ><option id='custom-select-option'></option></select>
         </div>
-        <div className={`custom-select-options`}>
-          {this.props.config.optionVals.map(value => {
-            <div data-value={value}>{value}</div>;
-          })}
+        <div className={`custom-select-divs`}>
+          {this.props.config.optionVals.map(value =>
+            <div data-value={value}>{value}</div>)}
         </div>
       </div>
     );
