@@ -1,0 +1,61 @@
+.select-box {
+   width: 50%;
+  height: 0;
+  input {
+    display: none;
+  }
+
+  #drop-down:checked ~ .open{
+    visibility: hidden;
+  
+  } 
+  #drop-arrow {
+    background: url('../assets/form-elements-sprite.png')  -398px -223px;
+      background-size: 1100%;
+      display: inline-block;
+      height: 30px;
+      width: 40px;
+      margin-left: 125px;
+      margin-top: 5px;
+      
+  }
+  
+  
+
+  label {
+    display: block;
+    height: 40px;
+    
+    line-height: 40px;  
+    font-size: 22px;
+    border: solid black 1px;
+  }
+
+
+}
+#drop-down {
+  width: 100%;
+  height: 100%;
+  display: none;
+
+}
+.odd {
+  background: grey;
+}
+.even {
+  background: rgb(176, 169, 169);
+}
+.open {
+  border: 1px solid black;
+  height: 40px;
+  text-align: left;
+  line-height: 40px;
+  padding-left: 20px;
+
+
+}
+
+
+h3 {
+  font-size: 24px;
+} 

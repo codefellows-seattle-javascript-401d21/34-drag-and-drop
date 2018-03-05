@@ -1,0 +1,69 @@
+.text-input {
+
+width: 50%;
+  position: relative;
+  margin: 50px auto;
+  #input-error{
+    visibility: hidden;
+  }
+  input:focus {
+    outline: none;
+  }
+  label {
+    font-size: 24px;
+    display: block;
+  }
+  input {
+    border: solid black 1px;
+    width: 98%;
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+
+}
+
+.text-input-validating {
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  label{
+    display: block;
+    font-size: 24px;
+  }
+  input:focus {
+    outline: none;
+  }
+
+  #text-input-validated:valid + #input-error{ 
+    visibility: hidden;
+    margin-top: 10px;
+    float: right;
+     
+
+  }
+  #text-input-validated:valid {
+    border: solid black 1px;
+  }
+   #text-input-validated:invalid + #input-error {
+     visibility: visible;
+     float: right; 
+     margin-top: 10px;
+     color: red;  
+   }
+   #text-input-validated:invalid  {
+    border: red solid 1px;
+   }
+
+  #input-error {
+  font-size: 16px;
+  }
+   input {
+   width: 98%;
+   font-size: 24px;
+   padding: 5px 0px;
+  }
+  
+}
+
