@@ -7,6 +7,7 @@ class UiBuildForm extends React.Component {
     this.state = {
       text_validation: '',
       radio_buttons: '',
+      select: '',
       checkbox: false,
     };
     this.handleChange = this.handleChange.bind(this);
@@ -48,10 +49,21 @@ class UiBuildForm extends React.Component {
             onChange: this.handleChecked,
           }
         } />
+        <UiBuildInput config={
+          {
+            type: 'select',
+            name: 'select',
+            optionVals: ['A', 'B', 'C'],
+            onChange: this.handleChange,
+            value: this.state.select,
+          }
+        }/>
       </form>
     );
   }
 }
+
+export default UiBuildForm;
 
 // this.props.config === {
 //  type: (type of input)

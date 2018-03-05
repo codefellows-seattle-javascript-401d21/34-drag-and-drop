@@ -4,7 +4,9 @@
   "description": "ui challenge lab",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "build": "webpack",
+    "watch": "webpack-dev-server --inline --hot",
+    "test": "jest --verbose"
   },
   "keywords": [
     "ui",

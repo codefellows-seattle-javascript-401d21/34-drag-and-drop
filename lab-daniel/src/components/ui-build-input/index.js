@@ -7,7 +7,7 @@ class UiBuildInput extends React.Component {
       <div>
         {this.props.config.optionVals.map((value, index) => {
           return (
-            <div className={`custom-${this.props.config.type}`}>
+            <div key={this.props.config.name + index} className={`custom-radio`}>
               <input
                 id={this.props.config.name + index}
                 type={this.props.config.type}
@@ -23,12 +23,11 @@ class UiBuildInput extends React.Component {
       </div>
     );
     case 'checkbox': return (
-      <div className={`custom-${this.props.config.type}`}>
+      <div className={`custom-checkbox`}>
         <input
           id={this.props.config.name}
           type={this.props.config.type}
           name={this.props.config.name}
-          checked='false'
         />
         <label htmlFor={this.props.config.name}>
           <div></div>
@@ -36,7 +35,7 @@ class UiBuildInput extends React.Component {
       </div>
     );
     case 'text': return (
-      <div className={`custom-${this.props.config.type}`}>
+      <div className={`custom-text`}>
         <label htmlFor={this.props.config.name}>{this.props.config.placeholder}</label>
         <input 
           type={this.props.config.type}
@@ -50,16 +49,16 @@ class UiBuildInput extends React.Component {
       </div>
     );
     case 'select': return (
-      <div className={`custom-${this.props.config.type}`}>
-        <label htmlFor={this.props.config.name}>{this.props.config.placeholder}</label>
-        <input
-          type={this.props.config.type}
-          name={this.props.config.name}
-          value={this.props.config.value}
-          onChange={this.props.config.onChange}
-          placeholder={this.props.config.placeholder}
-        />
-        <div id={`${this.props.config.name}-options`}>
+      <div className={`custom-select`}>
+        <div>{this.props.config.value}
+          <select
+            type={this.props.config.type}
+            name={this.props.config.name}
+            value={this.props.config.value}
+            onChange={this.props.config.onChange}
+          />
+        </div>
+        <div className={`custom-select-options`}>
           {this.props.config.optionVals.map(value => {
             <div data-value={value}>{value}</div>;
           })}
@@ -70,6 +69,8 @@ class UiBuildInput extends React.Component {
     }
   }
 }
+
+export default UiBuildInput;
 
 // this.props.config === {
 //  type: (type of input)
