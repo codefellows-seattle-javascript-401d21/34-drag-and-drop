@@ -3,11 +3,15 @@ require('jest');
 
 describe('Expense reducer', () => {
   it('should return the initial state on first call', () => {
+    global.localStorage = {};
+
     expect(reducer(undefined, {})).toEqual({});
   });
 
   it('should handle CATEGORY_CREATE', () => {
     let category = { _id: '1235', name: 'foo', budget: '100', timestamp: new Date() };
+
+    global.localStorage = {};
 
     let state = reducer({}, {
       type: 'CATEGORY_CREATE',
@@ -32,6 +36,8 @@ describe('Expense reducer', () => {
       ]
     };
 
+    global.localStorage = {};
+
     let state = reducer(oldstate, {
       type: 'CATEGORY_DELETE',
       payload: category,
@@ -47,6 +53,8 @@ describe('Expense reducer', () => {
       '1234': [expenseOne]
     };
 
+    global.localStorage = {};
+
     let state = reducer(oldstate, {
       type: 'EXPENSE_CREATE',
       payload: expenseTwo,
@@ -60,6 +68,8 @@ describe('Expense reducer', () => {
     let expenseOne = { _id: '1111', categoryId: '1234', name: 'foo', budget: '100', timestamp: new Date() };
     let expenseOneUpdate = { _id: '1111', categoryId: '1234', name: 'bar', budget: '200', timestamp: new Date() };
 
+    global.localStorage = {};
+
     let state = reducer({ [expenseOne.categoryId]: [expenseOne] }, {
       type: 'EXPENSE_UPDATE',
       payload: expenseOneUpdate,
@@ -70,6 +80,8 @@ describe('Expense reducer', () => {
 
   it('should handle EXPENSE_DELETE', () => {
     let expense = { _id: '1111', categoryId: '1234', name: 'foo', budget: '100', timestamp: new Date() };
+
+    global.localStorage = {};
 
     let state = reducer({
       '1234': [
