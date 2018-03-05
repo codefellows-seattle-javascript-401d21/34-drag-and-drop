@@ -4,7 +4,7 @@ import './_input.scss';
 class Input extends React.Component {
   constructor(props) {
     super(props);
-    this.config = this.sanitizeConfig(this.props.config);
+    this.config = this.buildConfig(this.props.config);
 
     // Binding Handlers
     Object.getOwnPropertyNames(Input.prototype)
@@ -12,7 +12,7 @@ class Input extends React.Component {
       .map(prop => this[prop] = this[prop].bind(this));
   }
 
-  sanitizeConfig(config) {
+  buildConfig(config) {
     // Input Title
     if (config.title) {
       config.title = (
@@ -33,6 +33,13 @@ class Input extends React.Component {
       );
     }
 
+    // For label (to reference id)
+    if (config.forLabel) {
+      if (!config.attrs.id)
+        throw new Error('id must be specified for for label');
+      config.label = <label htmlFor={config.attrs.id}></label>;
+    }
+
     return config;
   }
 
@@ -42,6 +49,7 @@ class Input extends React.Component {
         {this.config.title}
         <input {... this.config.attrs} />
         {this.config.validate}
+        {this.config.label}
       </div>
     );
   }
