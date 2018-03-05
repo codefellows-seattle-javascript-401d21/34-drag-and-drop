@@ -16,7 +16,7 @@ class FormInput extends React.Component{
           className={this.props.config.className} />
       </div>
     );
-  };
-};
+  }
+}
 
 export default FormInput;

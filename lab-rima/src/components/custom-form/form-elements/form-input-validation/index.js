@@ -22,7 +22,7 @@ class FormInputValidation extends React.Component{
         </label>
       </div>
     );
-  };
-};
+  }
+}
 
 export default FormInputValidation;

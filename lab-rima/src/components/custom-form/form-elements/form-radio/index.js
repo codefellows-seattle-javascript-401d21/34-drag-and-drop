@@ -14,7 +14,7 @@ class Radio extends React.Component{
         <label htmlFor={this.props.config.id}></label>
       </div>
     );
-  };
-};
+  }
+}
 
 export default Radio;

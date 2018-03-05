@@ -21,16 +21,16 @@ class CustomForm extends React.Component{
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-  };
+  }
 
   handleSubmit(event){
     event.preventDefault();
     console.log(this.state);
-  };
+  }
 
   handleChange(event){
     this.setState({[event.target.name]: event.target.value});
-  };
+  }
 
 
   render(){
@@ -127,7 +127,7 @@ class CustomForm extends React.Component{
 
       </div>
     );
-  };
-};
+  }
+}
 
 export default CustomForm;
