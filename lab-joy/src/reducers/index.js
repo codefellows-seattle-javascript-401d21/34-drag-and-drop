@@ -3,6 +3,6 @@ import categoryReducer from './category';
 import {combineReducers} from 'redux';
 
 export default combineReducers({
-  expense: expenseReducer,
+  expenses: expenseReducer,
   categories: categoryReducer,
 });

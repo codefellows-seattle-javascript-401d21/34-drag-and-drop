@@ -6,7 +6,6 @@ import CategoryItem from '../category/category-item/category-item';
 
 class Dashboard extends React.Component {
   render() {
-    console.log('dashboard props: ', this.props);
     return (
       <section>
         <h1>Budget Tracker</h1>
@@ -24,8 +23,8 @@ class Dashboard extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  categories: state,
-  expense: state.expense,
+  categories: state.categories,
+  expenses: state.expenses,
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({

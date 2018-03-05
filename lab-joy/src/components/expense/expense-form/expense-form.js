@@ -3,8 +3,8 @@ import React from 'react';
 class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.expense ?
-      this.props.expense :
+    this.state = this.props.expenses ?
+      this.props.expenses :
       {
         name: '',
         expense: 0,
@@ -37,8 +37,6 @@ class ExpenseForm extends React.Component {
   }
 
   render() {
-    console.log('expense-form props: ', this.props);
-
     return (
       <form className="expense-form" onSubmit={this.handleSubmit}>
         <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
