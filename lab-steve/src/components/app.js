@@ -9,10 +9,24 @@ const store = createStore();
 class App extends React.Component {
   render() {
     return (
-      <main className='main-content'>
+      <main className='application'>
         <Provider store={store}>
           <BrowserRouter>
-            <Route exact path='/' component={Dashboard} />
+            <div>
+              <header>
+                <div className='container'>
+                  <img className='logo' src='../../assets/logo.png' alt='logo' />
+                  <nav>
+                    <ul>
+                      <li><a href='/'>Home</a></li>
+                      <li><a href='/'>Dashboard</a></li>
+                      <li><a href='/'>CustomCSS</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </header>
+              <Route exact path='/' component={Dashboard} />
+            </div>
           </BrowserRouter>
         </Provider>
       </main>
@@ -20,4 +34,6 @@ class App extends React.Component {
   }
 }
 
+// color: #7AC795
+// color green light: #F2FFF7
 export default App;
