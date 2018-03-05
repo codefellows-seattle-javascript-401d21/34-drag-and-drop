@@ -1,0 +1,30 @@
+label, input {
+  display: block;
+}
+
+input[type=radio] {
+  display:none;
+}
+
+
+input[type=radio] + .radios {
+  display: block;
+  cursor: pointer;
+  outline: 0;
+  background-image: url('../assets/sprite.png');
+  background-position: -581px -242px; 
+  width: 170px;
+  height: 167px;
+  zoom: .3;
+}
+
+
+input[type=radio]:checked + .radios {
+  background-position: -811px -242px;
+}
+
+.radio-div {
+  padding-left: .8%;
+  margin: 0;
+  display: inline-block;
+}

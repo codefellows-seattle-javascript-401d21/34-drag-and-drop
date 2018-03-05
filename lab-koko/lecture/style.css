@@ -1,0 +1,89 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#slider {
+  display: none;
+}
+
+.slider-checkbox > label{
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  display: block;
+  border-radius: 25px;
+  position: relative;
+  transition: 350ms;
+}
+
+.labels div {
+  border: 1px solid grey;
+  background-color: floralwhite;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+
+input[type="checkbox"]:not(:checked) + label {
+  background-color: firebrick
+}
+input[type="checkbox"]:checked + label {
+  background-color: darkgreen;
+}
+
+input[type="checkbox"]:checked + label div{
+  left: 40%;
+}
+
+
+
+#validated-input {
+  border: darkgray 1px solid;
+  border-radius: 0;
+  padding: 1.75vw;
+}
+#validated-input focus {
+  outline: none;
+}
+.container {
+  width: 80%;
+  margin: 4vw auto;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.container label {
+  display: block;
+  font-weight:  bold;
+  padding: 2vw 0;
+}
+
+#input-error {
+  visibility: hidden;
+  position: absolute;
+  font-size: 2vw;
+  right: -88%;
+}
+
+/* #validated-input:not(:placeholder-shown):invalid {
+  border: 2px solid red;
+}
+
+#validated-input:not(:placeholder-shown):invalid + #input-error {
+  border: 2px solid red;
+} */
+
+/* INPUT WITH VALIDATION */
+
+#validated-input:not(:placeholder-shown):invalid {
+  border: 3px solid red;
+}
+
+#validated-input:not(:placeholder-shown):invalid + #input-error {
+  visibility: visible;
+}

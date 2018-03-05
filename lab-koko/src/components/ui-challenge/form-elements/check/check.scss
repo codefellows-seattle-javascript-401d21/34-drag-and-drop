@@ -1,0 +1,22 @@
+#box {
+  display:none;
+}
+
+#box + .checkboxes {
+  display:inline-block;
+  cursor: pointer;
+  outline: 0;
+  background-image: url('../assets/sprite.png');
+  background-position: -158px -239px; 
+  width: 161px;
+  height: 161px;
+  zoom: .3;
+  }
+
+  #box:checked + .checkboxes {
+    background-position: -381px -239px; 
+  }
+
+  .checkbox-div {
+    padding-top: 0;
+  }
