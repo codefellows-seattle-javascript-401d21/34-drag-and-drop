@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import './variables.scss';
 
 body {
   margin: 0;
@@ -13,7 +15,7 @@ body {
 }
 
 header {
-  background: #7AC795;
+  background: $green;
 }
 
 /* clear fix to avoid header disappearing */
@@ -43,7 +45,7 @@ nav li {
   position: relative;
 }
 nav a {
-  color: #fff;
+  color: $fontcolor;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
@@ -55,7 +57,7 @@ nav a::before {
   content: '';
   display: block;
   height: 5px;
-  background-color: #fff;
+  background-color: $fontcolor;
 
   /* animation of nav bar links */
   position: absolute;
@@ -66,4 +68,12 @@ nav a::before {
 
 nav a:hover::before {
   width: 100%;
+}
+
+.page-title {
+  font-family: Pacifico, cursive;
+  color: $fontcolor;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 35px;
 }
