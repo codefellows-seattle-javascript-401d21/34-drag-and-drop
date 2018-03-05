@@ -1,6 +1,28 @@
+$icons: url('../../styles/form-elements-sprite.png');
+
 .optionOne, .optionThree, .optionFive {
   background: grey;
 }
 .optionTwo, .optionFour {
   background: steelgrey;
+}
+
+div.select-tag {
+  position: relative;
+}
+
+select {
+  font-size: 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 97%;
+  height: 40px;
+  margin-right: 2%;
+  margin-bottom: 3%;
+  background-image: $icons -1171px -336px;
+}
+
+select:focus {
+  background: $icons -1033px -279px;
 }

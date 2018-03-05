@@ -6,9 +6,9 @@ import React from 'react';
 class SelectBox extends React.Component{
   render(){
     return(
-      <div>
+      <div className='select-tag'>
         <select
-          className={this.props.config.className} required>
+          className={this.props.config.className} id="selectid" required>
           <option
             value=""
             hidden>

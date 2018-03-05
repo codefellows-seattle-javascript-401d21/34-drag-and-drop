@@ -1,8 +1,15 @@
 @import 'vars';
 
+
 body {
-  width: 100%;
+  font-family: Tahoma, Geneva, sans-serif;
+  width: 500px;
   height: 100%;
+}
+
+div.custom-form {
+  width: 90%;
+  margin: auto;
 }
 
 div.radio-buttons, div.checkboxes {
@@ -10,3 +17,4 @@ div.radio-buttons, div.checkboxes {
     display: inline-block;
   }
 }
+
