@@ -9,8 +9,8 @@ class ExpenseItem extends React.Component {
     super(props);
 
     this.state = {
-      expense: this.props.expense ?
-        this.props.expense :
+      expenses: this.props.expenses ?
+        this.props.expenses :
         {
           name: '',
           expense: 0,
@@ -27,6 +27,10 @@ class ExpenseItem extends React.Component {
     }
   }
 
+  handleEditing(exp) {
+    this.setState({ editing: !this.state.editing });
+  }
+
   handleUpdate(exp) {
     this.setState({
       editing: !this.state.editing,
@@ -37,26 +41,24 @@ class ExpenseItem extends React.Component {
 
   handleDelete(e) {
     e.preventDefault();
-    this.props.expenseItemExpenseDelete(this.props.expense);
+    this.props.expenseItemExpenseDelete(this.props.expenses);
   }
 
   render() {
-    console.log('expense-item props: ', this.props);
-
     return (
-      <div className="expense-item" key={this.props.expense._id} onDoubleClick={this.handleUpdate}>
-        <h2>{this.props.expense.name}</h2>
-        <p>Expense: ${this.props.expense.expense}</p>
+      <div className="expense-item" key={this.props.expenses._id} onDoubleClick={this.handleEditing}>
+        <h2>{this.props.expenses.name}</h2>
+        <p>Expense: ${this.props.expenses.expense}</p>
         <button onClick={this.handleDelete}>{this.props.buttonText}</button>
 
-        {renderIf(this.state.editing, <ExpenseForm expense={this.props.expense} buttonText="update expense" onComplete={this.handleUpdate} />)}
+        {renderIf(this.state.editing, <ExpenseForm expenses={this.props.expenses} buttonText="update expense" onComplete={this.handleUpdate} />)}
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  categories: state.expense,
+  categories: state.expenses,
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({

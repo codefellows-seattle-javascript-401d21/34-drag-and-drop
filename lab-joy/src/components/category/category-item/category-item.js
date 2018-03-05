@@ -27,6 +27,12 @@ class CategoryItem extends React.Component {
     }
   }
 
+  handleEditing(cat) {
+    this.setState({
+      editing: !this.state.editing,
+    });
+  }
+
   handleUpdate(cat) {
     this.setState({
       editing: !this.state.editing,
@@ -41,32 +47,31 @@ class CategoryItem extends React.Component {
   }
 
   render() {
-    console.log('category-item props: ', this.props);
-
     return (
-      <div className="category-item" key={this.props.category._id} onDoubleClick={this.handleUpdate}>
+      <div className="category-item" key={this.props.category._id} onDoubleClick={this.handleEditing}>
         <h2>{this.props.category.name}</h2>
-        <p>Budget: ${this.props.category.budget}</p>
+        <p>Budget: ${this.props.category.budget - this.props.expenses[this.props.category._id].reduce((a, b) => a + Number(b.expense), 0)}</p>
         <button onClick={this.handleDelete}>{this.props.buttonText}</button>
 
-        {renderIf(this.state.editing, <CategoryForm category={this.props.category} buttonText="update" onComplete={this.handleUpdate} />)}
+        {renderIf(this.state.editing, <CategoryForm categories={this.props.category} buttonText="update" onComplete={this.handleUpdate} />)}
 
-        <ExpenseForm categoryId={this.props.category._id} buttonText="create expense" onComplete={this.props.expenseItemExpenseCreate} />
+        <div className="expenseform">
+          <ExpenseForm categoryId={this.props.category._id} buttonText="create expense" onComplete={this.props.expenseItemExpenseCreate} />
 
-        {
-          this.props.expense ?
-            this.props.expense[this.props.category._id].map(exp => <ExpenseItem key={exp._id} expense={exp} buttonText="delete expense" />)
-            :
-            undefined
-        }
+          {
+            this.props.expenses[this.props.category._id] ?
+              this.props.expenses[this.props.category._id].map(exp => <ExpenseItem key={exp._id} expenses={exp} buttonText="delete expense" />)
+              :
+              undefined
+          }
+        </div>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  categories: state,
-  expense: state.expense,
+  expenses: state.expenses,
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
