@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import ReactDom from 'react-dom';
 import FormInput from './ui-compoents/text-input/index';
