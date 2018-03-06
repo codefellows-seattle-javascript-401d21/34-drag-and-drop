@@ -38,8 +38,8 @@ const mapStateToProps = state => ({
   categories: state.categories,
 });
 
-const mapDispatchToProps = (dispatch, getState) => ({
-  dashboardCategoryCreate: category => dispatch(categoryCreate(category))
+const mapDispatchToProps = (dispatch) => ({
+  dashboardCategoryCreate: category => dispatch(categoryCreate(category)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
