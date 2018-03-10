@@ -1,4 +1,10 @@
-input.expense-name, input.price {
+input.expense-name {
+  height: 25px;
+  margin-left: 5px;
+  width: 30%;
+}
+
+input.price {
   height: 25px;
   margin-left: 5px;
   width: 30%;

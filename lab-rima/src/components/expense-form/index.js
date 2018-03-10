@@ -1,5 +1,4 @@
 import './_expense-form.scss';
-
 import React from 'react';
 import {renderIf} from '../../lib/utils';
 
@@ -8,11 +7,9 @@ class ExpenseForm extends React.Component{
     super(props);
 
     this.state = this.props.expense ? this.props.expense :
-      {
-        categoryId: this.props.categoryId,
+      {categoryId: this.props.categoryId,
         name: '',
-        price: 0,
-      };
+        price: 0,}
 
     let memberFunctions = Object.getOwnPropertyNames(ExpenseForm.prototype);
     for(let functionName of memberFunctions){

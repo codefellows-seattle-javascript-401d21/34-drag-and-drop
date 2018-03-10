@@ -4,10 +4,8 @@ import {mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 require('jest');
 
-
 Enzyme.configure({adapter: new Adapter()});
 import CategoryForm from '../../components/category-form/index';
-
 
 describe('CategoryForm component', () => {
 

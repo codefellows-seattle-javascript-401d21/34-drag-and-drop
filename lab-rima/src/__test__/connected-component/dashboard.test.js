@@ -10,7 +10,6 @@ require('jest');
 
 configure({adapter: new Adapter()});
 
-
 describe('<Dashboard />', function(){
 
   beforeAll(() => {
