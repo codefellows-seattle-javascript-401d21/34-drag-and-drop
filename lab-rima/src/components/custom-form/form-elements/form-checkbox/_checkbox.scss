@@ -1,0 +1,28 @@
+@import '../../styles/vars';
+
+
+div {
+  margin-bottom: 2%;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label {
+  display: inline-block;
+  background-image: $icons;
+  background-position: -159px -240px; 
+  width: 159px;
+  height: 158px;
+  zoom: 0.3;
+  margin-left: 10px;
+  margin-right: 2px;
+}
+
+input[type=checkbox]:checked + label {
+  background-position: -381px -240px; 
+  width: 160px;
+  height: 157px;
+}
+
