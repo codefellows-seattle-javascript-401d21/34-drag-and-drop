@@ -1,0 +1,73 @@
+.onclick-menu {
+    position: relative;
+    display: inline-block;
+    color: #969696;
+    width: 400px;
+    padding: 7px 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-left: -75px;
+    margin-bottom: 40px;
+}
+  
+ul {
+    height: 100%;
+    width: 100%;
+
+    li {
+        width: 100%;
+        height: 30px;
+        margin-left: 5px;
+        text-align: left;   
+    }
+}
+
+.shade-item {
+    background-color: rgb(122, 122, 122);
+}
+
+.light-item {
+    background-color: rgb(184, 184, 184);
+}
+  
+button {
+    width: 100%;
+    height: 30px;
+}
+
+.outside-box {
+    display: inline-block;
+    width: 277px;
+}
+
+.drop-image {
+    float: right;
+    position: relative;
+    display: block;
+    background-image: url('../../sprites/form-elements-sprite.png');
+    background-position: -1143px -281px; 
+    width: 77px;
+    height: 75px;
+    zoom: .3;
+}
+
+.menu-content {
+    position: absolute;
+    z-index: 3;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+    left: -5px;
+    font-size: 25px;
+    top: 27px;
+}
+
+.onclick-menu:focus .menu-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.onclick-menu:focus .drop-image {
+    background-position: -1035px -280px; 
+}

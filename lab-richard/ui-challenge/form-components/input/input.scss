@@ -1,0 +1,57 @@
+html {
+    width:480px;
+    margin: 0 auto;
+}
+
+.UI-Challenge {
+    h1 {
+        font-size: 22px;
+        margin-top: 30px;
+        text-decoration: underline;
+        margin-bottom: 30px;
+    }
+}
+
+
+h2 {
+    margin-left: 28px;
+    text-align: left;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.validated-input {
+    clear: both;
+    width: 400px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .validated-input:focus {
+    outline: none;
+  }
+  
+  .container label {
+    display: block;
+    font-weight: bold;
+    padding: 2vw 0;
+  }
+  
+  #input-error {
+    color: red;
+    font-size: 10px;
+    margin-top: 6px;
+    text-align: right;
+    display: block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .validated-input:not(:placeholder-shown):invalid + #input-error {
+    visibility: visible;
+    position: static;
+    display: block;
+    margin-left: 115px;
+  }
