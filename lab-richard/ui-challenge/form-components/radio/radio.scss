@@ -1,0 +1,24 @@
+input[type=radio] {
+    display:none;
+  }
+  
+  input[type=radio] + .radio-btn-label {
+    display: block;
+    margin-left: -720px;
+    cursor: pointer;
+    outline: 0;
+    background-image: url('../../sprites/form-elements-sprite.png');
+    background-position: -581px -242px;
+    width: 170px;
+    height: 167px;
+    zoom: .3;
+    margin-bottom: 150px;
+    }
+  
+    input[type=radio]:checked + .radio-btn-label {
+      background-position: -811px -242px; 
+    }
+  
+    .radio-btn-div {
+      display: inline-block;
+    }

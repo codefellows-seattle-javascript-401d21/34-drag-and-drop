@@ -17,8 +17,10 @@ class App extends React.Component {
             <main className="main-content">
                 <Provider store={store}>
                     <BrowserRouter>
-                        <Route exact path="/" component={Dashboard}/>
-                        <Route exact path="/ui" component={UI_Challenge}/>
+                        <React.Fragment>
+                            <Route exact path="/" component={Dashboard}/>
+                            <Route exact path="/ui" component={UI_Challenge}/>
+                        </React.Fragment>
                     </BrowserRouter>
                 </Provider>
             </main>

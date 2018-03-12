@@ -1,9 +1,9 @@
+import './reset.scss';
 import React from 'react';
 import ReactDom from 'react-dom';
-
 import Button from './form-components/button/button.js';
 import Checkbox from './form-components/checkbox/checkbox.js';
-import Input from './form-components/input/input.js';
+import FormInput from './form-components/input/input.js';
 import Radio from './form-components/radio/radio.js';
 import Select from './form-components/selectbox/selectbox.js';
 

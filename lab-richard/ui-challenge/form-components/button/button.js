@@ -6,11 +6,11 @@ class Button extends React.Component {
         return (
             <div>
                 <button
-                    className={this.props.config.className}
-                    type='submit'
+                    className="btn"
+                    type="submit"
                     name={this.props.config.name}
                     onChange={this.props.onChange}>
-                    {this.props.config.buttonText}
+                    submit
                 </button>
             </div>
         );
