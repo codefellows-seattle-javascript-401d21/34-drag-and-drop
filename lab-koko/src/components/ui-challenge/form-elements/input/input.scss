@@ -1,0 +1,39 @@
+.form-inputs {
+  display: block;
+  border: darkgray 1px solid;
+  border-radius: 2px;
+  padding: 1.25vw;
+  position: relative;
+}
+
+.form-inputs focus {
+  outline: none;
+}
+
+.container {
+  width: 80%;
+  margin: 4vw auto;
+  position: relative;
+}
+
+.container label {
+  display: block;
+  padding: 2vw 0;
+}
+
+#input-error {
+  visibility: hidden;
+  position: absolute;
+  left:28%;
+  margin-top: 1%; 
+  color: red
+}
+
+
+.form-inputs:not(:placeholder-shown):invalid {
+  border: 3px solid red;
+}
+
+.form-inputs:not(:placeholder-shown):invalid + #input-error {
+  visibility: visible;
+}
