@@ -1,0 +1,30 @@
+*{
+  margin: 20px;
+}
+
+body {
+  color: white;
+  background-color: $color-blue;
+  font-family: 'Roboto', sans-serif;
+}
+
+li.category-item {
+  border: solid $color-pink 2px;
+  width: 800px;
+  display: inline-block;
+  margin-left: 10px;
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  button {
+    font-size: 10px;
+    border: $color-black solid 2px;
+  }
+}
+
+
+li.expense-item {
+  display: inline-flex;
+}
+
